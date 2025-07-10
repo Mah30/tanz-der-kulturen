@@ -1,4 +1,5 @@
-import Test from "./components/test"
+import Header from "./components/Header"
+
 
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <>
-      <Test />
+      <Header />
 
     </>
   )
