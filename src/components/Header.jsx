@@ -1,13 +1,13 @@
-import Navbar from "./Navbar";
+/* import Navbar from "./Navbar"; */
 
 const Header = () => {
     return ( 
-        <header className="flex ">
+        <header className="flex items-center justify-between bg-yellow-100">
 
             {/* <!-- Logo --> */}
             <div>Logo</div>
             
-            <Navbar />
+         {/*    <Navbar /> */}
             
         </header>
      );
