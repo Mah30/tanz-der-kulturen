@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { Dropdown, DropdownItem } from "flowbite-react";
 
-const DropdownMenu = ({ section, items }) => {
+const DropdownMenu = ({ section, items, placement }) => {
     return ( 
-        <Dropdown label={section} className="text-gray-700 hover:text-teal shadow-lg rounded-md ring-1 ring-black ring-opacity-5  bg-white hover:bg-gray-100">
-          {items.map((item) => (
+        <Dropdown label={section} placement={placement} className="text-gray-700 hover:text-teal shadow-lg rounded-md ring-1 ring-black ring-opacity-5  bg-white hover:bg-gray-100">
+          {items.map((item) => "path" in item ? (
               <DropdownItem as={Link}
                 to={item.path}
                 key={item.name}
@@ -12,6 +12,10 @@ const DropdownMenu = ({ section, items }) => {
               >
                 {item.name}
               </DropdownItem>
+          ) : (
+            <DropdownMenu
+            key={item.name} 
+            section={item.name} items={item.subMenu} placement="right-start" />
           ))}
         </Dropdown>
      );

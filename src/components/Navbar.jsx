@@ -7,6 +7,10 @@ import ToggleTheme from "./ToggleTheme/ToggleTheme";
 const tanzeventLinks = [
   { name: "Tanzworkshops", path: "/tanzevent/tanzworkshops" },
   { name: "Performance", path: "/tanzevent/performance" },
+  { name: "sub", subMenu: [
+    { name: "Tanzworkshops", path: "/tanzevent/tanzworkshops" },
+    { name: "Performance", path: "/tanzevent/performance" },
+  ] },
 ];
 
 const weiterbildungLinks = [
