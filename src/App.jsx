@@ -1,19 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import Home from "./components/Home";
 import Contact from "./pages/Kontakt";
 import TanzworkshopsPage from "./pages/Tanzevents/TanzworkshopsPage";
-import Header from "./components/Header";
-
-
 
 function App() {
- 
-
   return (
     <div>
-      <Navbar />
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { useState } from "react"; // <-- adiciona esse import
 import DropdownMenu from "./Dropdowns/DropdownMenu";
+import ToggleTheme from "./ToggleTheme/ToggleTheme";
+
 
 const tanzeventLinks = [
   { name: "Tanzworkshops", path: "/tanzevent/tanzworkshops" },
@@ -30,12 +32,8 @@ const Navbar = () => {
 
 
   return (
-    <nav className="bg-white px-6 py-4 shadow-md flex justify-between items-center">
-      <div className="text-xl font-bold text-gray-800">
-        <Link to="/">Logo</Link>
-      </div>
 
-      <div className="flex space-x-6 items-center relative">
+      <nav className="flex space-x-6 items-center relative">
         <Link
           to="/"
           className="text-gray-700 hover:text-teal-600 transition duration-200"
@@ -73,7 +71,6 @@ const Navbar = () => {
         >
           Kontakt
         </Link>
-      </div>
     </nav>
   );
 }

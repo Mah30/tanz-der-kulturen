@@ -1,22 +1,17 @@
-/* import Navbar from "./Navbar"; */
+import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 import ToggleTheme from "./ToggleTheme/ToggleTheme";
 
-
-
-
 const Header = () => {
-    return ( 
-        <header
-      className="flex items-center justify-between bg-red-900 text-white px-6 py-5 relative"
-    >
-        <ToggleTheme/>
-
-    
-            
-         {/*    <Navbar /> */}
-            
-        </header>
-     );
+  return ( 
+    <header className="bg-white px-6 py-4 shadow-md flex justify-between items-center">
+      <div className="text-xl font-bold text-gray-800">
+        <Link to="/">Logo</Link>
+      </div>
+      <Navbar />      
+      <ToggleTheme/>
+    </header>
+  );
 }
  
 export default Header;
