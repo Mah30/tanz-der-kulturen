@@ -5,12 +5,25 @@ import ToggleTheme from "./ToggleTheme/ToggleTheme";
 
 
 const tanzeventLinks = [
-  { name: "Tanzworkshops", path: "/tanzevent/tanzworkshops" },
-  { name: "Performance", path: "/tanzevent/performance" },
-  { name: "sub", subMenu: [
-    { name: "Tanzworkshops", path: "/tanzevent/tanzworkshops" },
-    { name: "Performance", path: "/tanzevent/performance" },
-  ] },
+  
+  {
+    name: "Tanzworkshops",
+    subMenu: [
+      { name: "Tanzjams Freitag", path: "/tanzworkshops/tanzjams-freitag" },
+      { name: "Salzwedel", path: "/tanzworkshops/salzwedel" },
+      { name: "Usedom", path: "/tanzworkshops/usedom" },
+      { name: "Berlin", path: "/tanzworkshops/berlin" },
+      { name: "Hamburger Hochschule", path: "/tanzworkshops/hamburger-hochschule" },
+      { name: "Hannover", path: "/tanzworkshops/hannover" },
+    ]
+  },
+  {
+    name: "Performance",
+    subMenu: [
+      { name: "Hochzeitsrituale", path: "/performance/hochzeitsrituale" },
+    ]
+  }
+    
 ];
 
 const weiterbildungLinks = [
