@@ -62,19 +62,17 @@ const MenuItems = ({ items, depthLevel }) => {
               <Link to={items.url}>{items.title}</Link>
             )}
 
-            {depthLevel > 0 &&
-            window.innerWidth < 960 ? null : depthLevel > 0 &&
-              window.innerWidth > 960 ? (
-              <span>&raquo;</span>
+            {depthLevel > 0 ? (
+            <span className="ml-1">{window.innerWidth > 960 ? '›' : ''}</span>
             ) : (
-              <span className="arrow" />
+            <span className="arrow ml-1">▼</span>
             )}
           </button>
-          <Dropdown
+          <Dropdown 
             depthLevel={depthLevel}
             submenus={items.submenu}
             dropdown={dropdown}
-          />
+            />
         </div>
       ) : !items.url && items.submenu ? (
         <>

@@ -5,18 +5,18 @@ export const menuItems = [
       {
         title: "Tanzworkshops", // Level 1
         submenu: [              // Level 2
-          { title: "Tanzjams Freitag", url: "/tanzworkshops/tanzjams-freitag" },
-          { title: "Salzwedel", url: "/tanzworkshops/salzwedel" },
-          { title: "Usedom", url: "/tanzworkshops/usedom" },
-          { title: "Berlin", url: "/tanzworkshops/berlin" },
-          { title: "Hamburger Hochschule", url: "/tanzworkshops/hamburger-hochschule" },
-          { title: "Hannover", url: "/tanzworkshops/hannover" },
+          { title: "Tanzjams Freitag", url: "/tanzworkshops/tanzjams-freitag"},
+          { title: "Salzwedel", url: "/tanzworkshops/salzwedel"},
+          { title: "Usedom", url: "/tanzworkshops/usedom"},
+          { title: "Berlin", url: "/tanzworkshops/berlin"},
+          { title: "Hamburger Hochschule", url: "/tanzworkshops/hamburger-hochschule"},
+          { title: "Hannover", url: "/tanzworkshops/hannover"},
         ]
       },
       {
         title: "Performance", // Nível 1
         submenu: [
-          { title: "Hochzeitsrituale", url: "/performance/hochzeitsrituale" },
+          { title: "Hochzeitsrituale", url: "/performance/hochzeitsrituale"},
         ]
       }
     ]
@@ -24,7 +24,7 @@ export const menuItems = [
   {
     title: "Weiterbildung",
     submenu: [
-      { title: "Aufbau + Termine", url: "/weiterbildung/aufbau-termine" },
+      { title: "Aufbau + Termine", url: "/weiterbildung/aufbau-termine"},
       { title: "Konzept", url: "/weiterbildung/konzept" },
       { title: "Buch", url: "/weiterbildung/buch" },
       { title: "Lernplattform", url: "/weiterbildung/lernplattform" },
