@@ -1,105 +1,58 @@
-import { useState, useEffect, useRef } from 'react';
-import Dropdown from './Dropdown';
-
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const MenuItems = ({ items, depthLevel }) => {
+const MenuItems = ({ menu, depthLevel = 0, onCloseAll }) => {
   const [dropdown, setDropdown] = useState(false);
 
-  
-  let ref = useRef();
+  function toggleDropdown() {
+    setDropdown(!dropdown);
+  }
 
-  useEffect(() => {
-    const handler = (event) => {
-      if (
-        dropdown &&
-        ref.current &&
-        !ref.current.contains(event.target)
-      ) {
-        setDropdown(false);
-      }
-    };
-    document.addEventListener('mousedown', handler);
-    document.addEventListener('touchstart', handler);
-    return () => {
-      // Cleanup the event listener
-      document.removeEventListener('mousedown', handler);
-      document.removeEventListener('touchstart', handler);
-    };
-  }, [dropdown]);
+  return (menu.submenu ? (
+          <>
+            <button
+              className={"cursor-pointer flex gap-2 px-3 py-2 hover:bg-green-500 active:bg-green-600 w-full" + (dropdown ? "bg-green-500" : "")}
+              type="button"
+              aria-haspopup="menu"
+              aria-expanded={dropdown ? 'true' : 'false'}
+              onClick={toggleDropdown}
+            >
+              <span>{menu.title}</span>
+              {depthLevel > 0 ? (
+                <span>&raquo;</span>
+              ) : (
+                <span className="arrow" />
+              )}
+            </button>
 
-  const onMouseEnter = () => {
-    window.innerWidth > 960 && setDropdown(true);
-  };
-
-  const onMouseLeave = () => {
-    window.innerWidth > 960 && setDropdown(false);
-  };
-
-  const closeDropdown = () => {
-    dropdown && setDropdown(false);
-  };
-
-  return (
-    <li
-      className="menu-items"
-      ref={ref}
-      onMouseEnter={onMouseEnter}
-      onMouseLeave={onMouseLeave}
-      onClick={closeDropdown}
-    >
-      {items.url && items.submenu ? (
-        <div>
-          <button
-            type="button"
-            aria-haspopup="menu"
-            aria-expanded={dropdown ? 'true' : 'false'}
-            onClick={() => setDropdown((prev) => !prev)}
-          >
-            {window.innerWidth < 960 && depthLevel === 0 ? (
-              items.title
-            ) : (
-              <Link to={items.url}>{items.title}</Link>
-            )}
-
-            {depthLevel > 0 ? (
-            <span className="ml-1">{window.innerWidth > 960 ? '›' : ''}</span>
-            ) : (
-            <span className="arrow ml-1">▼</span>
-            )}
-          </button>
-          <Dropdown 
-            depthLevel={depthLevel}
-            submenus={items.submenu}
-            dropdown={dropdown}
-            />
-        </div>
-      ) : !items.url && items.submenu ? (
-        <>
-          <button
-            type="button"
-            aria-haspopup="menu"
-            aria-expanded={dropdown ? 'true' : 'false'}
-            onClick={() => setDropdown((prev) => !prev)}
-          >
-            {items.title}{' '}
-            {depthLevel > 0 ? (
-              <span>&raquo;</span>
-            ) : (
-              <span className="arrow" />
-            )}
-          </button>
-          <Dropdown
-            depthLevel={depthLevel}
-            submenus={items.submenu}
-            dropdown={dropdown}
-          />
-        </>
-      ) : (
-        <Link to={items.url}>{items.title}</Link>
-      )}
-    </li>
-  );
+            <menu className={dropdown
+              ? (depthLevel > 0 ? " left-full top-0" : "") + " absolute flex flex-col bg-green-400 z-50"
+              : "hidden"}>
+             {menu.submenu.map((item) => (
+                <li
+                  className="relative"
+                  key={item.title}
+                >
+                  <MenuItems
+                    depthLevel={depthLevel+1}
+                    menu={item}
+                    onCloseAll={() => {
+                      setDropdown(false);
+                      onCloseAll();
+                    }}
+                  />
+                </li>
+             ))}
+            </menu> 
+          </>
+        ) : (
+          <Link
+            to={menu.url}
+            onClick={onCloseAll}
+           className='cursor-pointer flex gap-2 px-3 py-2 hover:bg-green-500 active:bg-amber-300'
+          >{menu.title}</Link>
+        )
+      );
 };
 
 export default MenuItems;

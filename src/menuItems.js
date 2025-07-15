@@ -1,5 +1,9 @@
 export const menuItems = [
   {
+    title: 'Home',
+    url: '/',
+  },
+  {
     title: "Tanzevents", // Level 0
     submenu: [
       {

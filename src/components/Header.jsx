@@ -1,21 +1,21 @@
 import Navbar from './Navbar';
+import Logo from '../assets/images/logo.png';
+
 
 // ...
 import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header>
-      <div className="shadow-md text-gray-900 bg-red-400">
-        <Link to="/" className="logo">
-          Logo
+    <header className="flex items-center">
+  
+        <Link to="/" className="block w-24 h-auto">
+          <img src={Logo} alt="Logo of tanz der kulturen" />
         </Link>
         <Navbar />
-      </div>
+      
     </header>
   );
 };
 
 export default Header;
-
-/* https://www.youtube.com/watch?v=JbFURlz3p6U */

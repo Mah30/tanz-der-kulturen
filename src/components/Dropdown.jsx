@@ -6,7 +6,7 @@ const Dropdown = ({ submenus, dropdown, depthLevel }) => {
   return (
     <ul
       className={`dropdown ${dropdownClass} ${
-        dropdown ? 'show' : ''
+        dropdown ? '' : 'hidden'
       }`}
     >
       {submenus.map((submenu, index) => (
