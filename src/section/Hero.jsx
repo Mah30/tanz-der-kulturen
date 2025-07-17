@@ -18,7 +18,7 @@ const HeroCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 3000);
+    }, 5000);
     return () => clearInterval(interval); 
   }, []);
 
@@ -41,7 +41,7 @@ const HeroCarousel = () => {
       {images.map((image, index) => (
         <div
           key={index}
-          className={`absolute w-full h-full transition-opacity duration-1000 ease-in-out ${
+          className={`absolute w-full h-full pb-12 transition-opacity duration-1000 ease-in-out ${
             index === current ? "opacity-100 z-10" : "opacity-0 z-0"
           }`}
         >
@@ -56,26 +56,26 @@ const HeroCarousel = () => {
       {/* Buttons Left - Right */}
       <button
         onClick={prevSlide}
-        className="absolute left-5 top-1/2 transform -translate-y-1/2 text-white bg-black/50 rounded-full p-2 hover:bg-black/70"
+        className="absolute z-30 cursor-pointer left-5 top-1/2 transform -translate-y-1/2 text-white bg-black/50 rounded-full p-2 hover:bg-black/70"
       >
         <ChevronLeft size={32} />
       </button>
 
       <button
         onClick={nextSlide}
-        className="absolute right-5 top-1/2 transform -translate-y-1/2 text-white bg-black/50 rounded-full p-2 hover:bg-black/70"
+        className="absolute z-30 cursor-pointer right-5 top-1/2 transform -translate-y-1/2 text-white bg-black/50 rounded-full p-2 hover:bg-black/70"
       >
         <ChevronRight size={32} />
       </button>
 
       {/* Indicadores */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3">
+      <div className="absolute z-30 bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-3">
         {images.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
-            className={`h-3 w-3 rounded-full ${
-              index === current ? "bg-white" : "bg-white/50"
+            className={`h-3 w-3 rounded-full cursor-pointer ${
+              index === current ? "bg-gray-500" : "bg-gray-300"
             }`}
           ></button>
         ))}
