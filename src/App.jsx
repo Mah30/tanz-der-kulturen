@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Contact from "./pages/Kontakt";
 import TanzworkshopsPage from "./pages/Tanzevents/TanzworkshopsPage";
+import HeroCarousel from "./section/Hero";
 
 
 
@@ -15,6 +16,8 @@ function App() {
     <div>
       <Header />
 
+      <HeroCarousel/>
+      
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
