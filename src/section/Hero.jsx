@@ -35,7 +35,7 @@ const HeroCarousel = () => {
   };
 
   return (
-    <div className="relative w-full h-96 overflow-hidden">
+    <div className="relative w-full h-[570px] overflow-hidden">
 
       {/* Slides */}
       {images.map((image, index) => (
