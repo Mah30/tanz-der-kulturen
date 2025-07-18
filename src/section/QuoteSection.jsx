@@ -7,13 +7,14 @@ const QuoteSection = ({
   leftQuote="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, repudiandae. Magnam doloremque porro sunt modi inventore rem harum aspernatur, maxime exercitationem labore laudantium eligendi eos officia repudiandae. Labore, possimus deserunt? " ,
   rightQuote="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, repudiandae. Magnam doloremque porro sunt modi inventore rem harum aspernatur, maxime exercitationem labore laudantium eligendi eos officia repudiandae. Labore, possimus deserunt? " 
 }) => {
+
   return (
-    <section className="flex items-center justify-between w-full px-4 py-12 bg-white">
+    <section className="w-screen flex items-center justify-between py-0 bg-gray-50">{/* w-screen */}
       {/* left image */}
       <img
         src={massa}
-        alt="Pessoa à esquerda"
-        className="w-32 h-auto object-cover m-0"
+        alt="Profile image of a Black man with a beard, calm expression, looking straight ahead toward the woman."
+        className="w-42 h-auto md:w-52 md:h-auto object-cover m-0"
       />
 
       {/* quotes and animations */}
@@ -36,8 +37,8 @@ const QuoteSection = ({
       {/* right image */}
       <img
         src={stephanie}
-        alt="Pessoa à direita"
-        className="w-32 h-auto object-cover m-0"
+        alt="Profile image of a white woman, smiling, looking straight ahead toward the man."
+        className="w-36 h-auto md:w-48 md:h-auto object-cover m-0"
       />
     </section>
   );

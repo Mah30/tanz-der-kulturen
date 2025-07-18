@@ -5,3 +5,7 @@
 @source "../.flowbite-react/class-list.json";
 
 
+body {
+    margin: 0;
+    padding: 0;
+  }
