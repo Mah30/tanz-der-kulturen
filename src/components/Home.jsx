@@ -1,8 +1,15 @@
+import HeroCarousel from "../section/Hero";
+import QuoteSection from "../section/QuoteSection";
+
+
+
 const Home = () => {
     return ( 
-        <h1>
-            Home
-        </h1>
+        <div>
+            <HeroCarousel />
+            <QuoteSection />
+            
+        </div>
      );
 }
  
