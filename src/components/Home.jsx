@@ -1,6 +1,8 @@
-import HeroCarousel from "../section/Hero";
+import EventSection from "../section/EventSection";
+import HeroCarousel from "../section/HeroSection";
 import QuoteSection from "../section/QuoteSection";
-import TestWorkshops from "../section/TestWorkshops";
+
+
 
 
 
@@ -9,7 +11,7 @@ const Home = () => {
         <div>
             <HeroCarousel />
             <QuoteSection />
-            <TestWorkshops />
+            <EventSection />
             
         </div>
      );
