@@ -6,23 +6,8 @@ export const menuItems = [
   {
     title: "Tanzevents", // Level 0
     submenu: [
-      {
-        title: "Tanzworkshops", // Level 1
-        submenu: [              // Level 2
-          { title: "Tanzjams Freitag", url: "/tanzworkshops/tanzjams-freitag"},
-          { title: "Salzwedel", url: "/tanzworkshops/salzwedel"},
-          { title: "Usedom", url: "/tanzworkshops/usedom"},
-          { title: "Berlin", url: "/tanzworkshops/berlin"},
-          { title: "Hamburger Hochschule", url: "/tanzworkshops/hamburger-hochschule"},
-          { title: "Hannover", url: "/tanzworkshops/hannover"},
-        ]
-      },
-      {
-        title: "Performance", // Nível 1
-        submenu: [
-          { title: "Hochzeitsrituale", url: "/performance/hochzeitsrituale"},
-        ]
-      }
+      {title: "Tanzworkshops", url:"/tanzevent/tanzworkshops"},
+      {title: "Performance", url:"/tanzevent/performance"}
     ]
   },
   {
