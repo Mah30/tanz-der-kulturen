@@ -1,11 +1,11 @@
-const Performance = () => {
+const Performances = () => {
     return ( 
         <div>
             <h1>
-                Performance
+                Performances
             </h1>
         </div>
      );
 }
  
-export default Performance;
+export default Performances;

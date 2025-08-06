@@ -17,19 +17,23 @@ const Header = () => {
           <Navbar />
         </div>
         
-        <Link
-                to="/login"
-                className="rounded-lg bg-red-600 px-5 py-2 text-sm font-medium text-white shadow-md transition-all duration-300 hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-200"
-              >
-                Login
-        </Link> 
+        <div className='flex gap-4'>
+          <Link
+                  to="/login"
+                  className="rounded-lg bg-green-500 px-5 py-2 text-sm font-medium text-white shadow-md transition-all duration-300 hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-200"
+                >
+                  Login
+          </Link> 
 
-        <Link
-                to="/signup"
-                className="rounded-lg bg-red-600 px-5 py-2 text-sm font-medium text-white shadow-md transition-all duration-300 hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-200"
-              >
-                Sign Up
-        </Link>
+          <Link
+                  to="/signup"
+                  className="rounded-lg bg-green-500 px-5 py-2 text-sm font-medium text-white shadow-md transition-all duration-300 hover:bg-red-900 focus:outline-none focus:ring-2 focus:ring-red-200"
+                >
+                  Signup
+          </Link>
+
+        </div>
+        
       
     </header>
   );

@@ -5,7 +5,7 @@ import Home from "./components/Home";
 import Contact from "./pages/Kontakt";
 import TanzworkshopsPage from "./pages/Tanzevents/TanzworkshopsPage";
 import LoginPage from "./pages/LoginPage";
-import Performance from "./pages/Tanzevents/Performance";
+import Performances from "./pages/Tanzevents/Performances";
 import SignupPage from "./pages/SignupPage"
 
 
@@ -27,7 +27,7 @@ function App() {
         
         <Route path="/contact" element={<Contact />} />
         <Route path="/tanzevent/tanzworkshops" element={<TanzworkshopsPage />} />
-        <Route path="/tanzevent/performance" element={<Performance />} />
+        <Route path="/tanzevent/Performances" element={<Performances />} />
 
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />

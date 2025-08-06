@@ -7,7 +7,7 @@ export const menuItems = [
     title: "Tanzevents", // Level 0
     submenu: [
       {title: "Tanzworkshops", url:"/tanzevent/tanzworkshops"},
-      {title: "Performance", url:"/tanzevent/performance"}
+      {title: "Performances", url:"/tanzevent/performances"}
     ]
   },
   {
