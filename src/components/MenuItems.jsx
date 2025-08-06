@@ -3,16 +3,13 @@ import { Link } from 'react-router-dom';
 
 const MenuItems = ({ menu, depthLevel = 0, onCloseAll }) => {
   const [dropdown, setDropdown] = useState(false);
-
   const ref = useRef();
+
 
   useEffect(() => {
     const handleClickOutside = (event) => {
       if(
-        dropdown &&
-        ref.current &&
-        !ref.current.contains(event.target)
-      ) {
+        dropdown && ref.current && !ref.current.contains(event.target)) {
          setDropdown(false); 
       }
     };
@@ -25,6 +22,7 @@ const MenuItems = ({ menu, depthLevel = 0, onCloseAll }) => {
       document.removeEventListener('touchstart', handleClickOutside);
     };
   }, [dropdown]);
+
 
   /* show dropdown - mouse on big screen */
   const onMouseEnter = () => {
@@ -53,10 +51,12 @@ const MenuItems = ({ menu, depthLevel = 0, onCloseAll }) => {
     className="relative"
   >
     {menu.submenu ? (
-          <>
-            <button
-              className={"cursor-pointer flex gap-2 px-3 py-2 hover:bg-green-500 active:bg-green-600 w-full" + (dropdown ? "bg-green-500" : "")}
-              type="button"
+          <div>
+            <div
+              role='button'
+              className={`cursor-pointer flex gap-2 px-3 py-2 hover:bg-green-500 active:bg-green-600 w-full items-center ${
+                dropdown ? 'bg-green-500' : ''
+              }`}
               aria-haspopup="menu"
               aria-expanded={dropdown ? 'true' : 'false'}
               onClick={toggleDropdown}
@@ -67,7 +67,7 @@ const MenuItems = ({ menu, depthLevel = 0, onCloseAll }) => {
               ) : (
                 <span className="arrow" />
               )}
-            </button>
+            </div>
 
             <menu className={dropdown
               ? (depthLevel > 0 ? " left-full top-0" : "") + " absolute flex flex-col bg-green-400 z-50"
@@ -78,7 +78,7 @@ const MenuItems = ({ menu, depthLevel = 0, onCloseAll }) => {
                   key={item.title}
                 >
                   <MenuItems
-                    depthLevel={depthLevel+1}
+                    depthLevel={depthLevel + 1}
                     menu={item}
                     onCloseAll={() => {
                       setDropdown(false);
@@ -88,7 +88,7 @@ const MenuItems = ({ menu, depthLevel = 0, onCloseAll }) => {
                 </li>
              ))}
             </menu> 
-          </>
+          </div>
         ) : (
           <Link
             to={menu.url}
