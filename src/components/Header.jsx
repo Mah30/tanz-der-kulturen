@@ -1,5 +1,5 @@
 import Navbar from './Navbar';
-import Logo from '../assets/images/logo.png';
+import Logo from '../assets/images/imgStartSeite/logo-tdk.png';
 import { Link } from 'react-router-dom';
 
 
@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <header className="flex justify-between items-center  px-8 py-2 shadow-sm bg-gray-200">
   
-        <Link to="/" className="block w-24 h-auto">
+        <Link to="/" className="block w-54 h-auto">
           <img src={Logo} alt="Logo of tanz der kulturen" />
         </Link>
 

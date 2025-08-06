@@ -6,6 +6,7 @@ import Contact from "./pages/Kontakt";
 import TanzworkshopsPage from "./pages/Tanzevents/TanzworkshopsPage";
 import LoginPage from "./pages/LoginPage";
 import Performance from "./pages/Tanzevents/Performance";
+import SignupPage from "./pages/SignupPage"
 
 
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/tanzevent/performance" element={<Performance />} />
 
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
       </Routes>
     </div>
     

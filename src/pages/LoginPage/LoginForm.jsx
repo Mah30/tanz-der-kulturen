@@ -1,39 +1,52 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Spinner, Button, TextInput, Label } from "flowbite-react";
 
-const LoginForm = () => {
-    /* const [error, setError] = useState('');
-    const [success, setSuccess] = useState(''); */
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Email:', email);
-    console.log('Password:', password);
-  };
+
+const LoginForm = ({
+  email,
+  password,
+  isLoading,
+  onEmailChange,
+  onPasswordChange,
+  onSubmit,
+
+}) => {
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4">
-      <input
-        type="email"
-        placeholder="Email"
-        className="w-full rounded border p-2"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Password"
-        className="w-full rounded border p-2"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button
+    <form onSubmit={onSubmit} className="space-y-4">
+      <div>
+        <Label htmlFor="email" value="Email" className="text-gray-300" />
+        <TextInput
+          id="email"
+          type="email"
+          placeholder="name@example.com"
+          value={email}
+          onChange={onEmailChange}
+          required
+          className="w-full rounded-md border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500"
+        />
+      </div>
+      <div>
+        <Label htmlFor="password" value="Password" className="text-gray-300" />
+        <TextInput
+          id="password"
+          type="password"
+          value={password}
+          onChange={onPasswordChange}
+          required
+          className="w-full rounded-md border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500"
+        />
+      </div>
+
+      <Button
         type="submit"
-        className="w-full rounded bg-teal-600 py-2 text-white hover:bg-green-900"
+        className="w-full rounded-md bg-orange-400 py-2 text-lg font-semibold text-white shadow-md transition-all duration-300 hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-500"
+        disabled={isLoading}
       >
-        Log In
-      </button>
+        {isLoading && <Spinner size="sm" className="mr-2" />}
+        Sign In
+      </Button>
     </form>
   );
 }

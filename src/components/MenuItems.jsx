@@ -51,7 +51,7 @@ const MenuItems = ({ menu, depthLevel = 0, onCloseAll }) => {
     className="relative"
   >
     {menu.submenu ? (
-          <div>
+          <>
             <div
               role='button'
               className={`cursor-pointer flex gap-2 px-3 py-2 hover:bg-green-500 active:bg-green-600 w-full items-center ${
@@ -69,15 +69,20 @@ const MenuItems = ({ menu, depthLevel = 0, onCloseAll }) => {
               )}
             </div>
 
-            <menu className={dropdown
-              ? (depthLevel > 0 ? " left-full top-0" : "") + " absolute flex flex-col bg-green-400 z-50"
-              : "hidden"}>
+            <ul 
+            className={`${
+              dropdown
+                ? depthLevel > 0
+                  ? 'left-full top-0'
+                  : ''
+                : 'hidden'
+            } absolute z-50 flex flex-col bg-green-400`}
+          >
+
              {menu.submenu.map((item) => (
-                <li
-                  className="relative"
-                  key={item.title}
-                >
+               
                   <MenuItems
+                    key={item.title}
                     depthLevel={depthLevel + 1}
                     menu={item}
                     onCloseAll={() => {
@@ -85,10 +90,10 @@ const MenuItems = ({ menu, depthLevel = 0, onCloseAll }) => {
                       onCloseAll();
                     }}
                   />
-                </li>
+               
              ))}
-            </menu> 
-          </div>
+            </ul> 
+          </>
         ) : (
           <Link
             to={menu.url}
