@@ -48,8 +48,22 @@ const HeroCarousel = () => {
           <img
             src={image}
             alt={`Slide ${index + 1}`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover z-0"
           />
+
+          {/* Overlay to contraste */}
+          <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
+
+          {/* 🔹 Texto centralizado acima do overlay */}
+          <div className="absolute z-20 inset-0 flex items-center justify-start">
+      <div className="ml-25 max-w-[600px]">
+        <h2
+         className="text-[#FAF070] text-5xl md:text-7xl font-extrabold leading-tight">
+        Welcome to <br /> Tanz der Kulturen
+        </h2>
+      </div>
+    </div>
+
         </div>
       ))}
 
