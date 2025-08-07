@@ -28,4 +28,8 @@ export const menuItems = [
       { title: "Team", url: "/uber-uns/team" },
     ]
   },
+  {
+    title: "Kontakt",
+    
+  },
 ];
