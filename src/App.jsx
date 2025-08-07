@@ -5,8 +5,9 @@ import Home from "./components/Home";
 import Contact from "./pages/Kontakt";
 import TanzworkshopsPage from "./pages/Tanzevents/TanzworkshopsPage";
 import LoginPage from "./pages/LoginPage";
-import Performances from "./pages/Tanzevents/Performances";
+import Performances from "./pages/Tanzevents/PerformancesPage";
 import SignupPage from "./pages/SignupPage"
+/* import ColorStyleGuide from "./components/ColorStyleGuide"; */
 
 
 
@@ -20,6 +21,8 @@ function App() {
   return (
     <div>
       <Header />
+
+      {/* <ColorStyleGuide /> */}
    
 
       <Routes>

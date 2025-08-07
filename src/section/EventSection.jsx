@@ -24,7 +24,7 @@ const dummyEvents = [
     day: "10",
     month:"September",
     title: "Live Music",
-    description: "Music and Performance with artists ",
+    description: "Music and Performances with artists ",
     workshopLeitung:"Stephanie Bangoura",
   },
 ];
