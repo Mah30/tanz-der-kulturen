@@ -1,6 +1,6 @@
 import React from 'react';
-import massa from "../assets/images/massa.png"
-import stephanie from "../assets/images/stephanie.png"
+import massa from "../assets/images/imgStartSeite/massa.png"
+import stephanie from "../assets/images/imgStartSeite/stephanie.png"
 
 
 const QuoteSection = ({ 
@@ -9,7 +9,7 @@ const QuoteSection = ({
 }) => {
 
   return (
-    <section className="w-screen flex items-center justify-between py-0 bg-gray-50">{/* w-screen */}
+    <section className="w-screen flex items-center justify-between py-0 bg-[#E0F5F7]">{/* w-screen */}
       {/* left image */}
       <img
         src={massa}
@@ -32,7 +32,7 @@ const QuoteSection = ({
             “{rightQuote}”
           </p>
         </div>
-      </div>
+      </div>  
 
       {/* right image */}
       <img

@@ -24,7 +24,7 @@ const LoginForm = ({
           value={email}
           onChange={onEmailChange}
           required
-          className="w-full rounded-md border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500"
+          className="w-full rounded-md border border-gray-600 bg-[#027D8F] p-2 text-white focus:border-blue-500 focus:ring-blue-500"
         />
       </div>
       <div>
@@ -32,16 +32,17 @@ const LoginForm = ({
         <TextInput
           id="password"
           type="password"
+          placeholder="password"
           value={password}
           onChange={onPasswordChange}
           required
-          className="w-full rounded-md border border-gray-600 bg-gray-700 p-2 text-white focus:border-blue-500 focus:ring-blue-500"
+          className="w-full rounded-md border border-gray-600 bg-[#027D8F] p-2 text-white focus:border-blue-500 focus:ring-blue-500"
         />
       </div>
 
       <Button
         type="submit"
-        className="w-full rounded-md bg-orange-400 py-2 text-lg font-semibold text-white shadow-md transition-all duration-300 hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-500"
+        className="w-full rounded-md bg-[#027D8F] py-2 text-lg font-semibold text-white shadow-md transition-all duration-300 hover:bg-[#315358] focus:outline-none focus:ring-4 focus:ring-red-500"
         disabled={isLoading}
       >
         {isLoading && <Spinner size="sm" className="mr-2" />}

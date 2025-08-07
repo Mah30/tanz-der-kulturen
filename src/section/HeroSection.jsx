@@ -1,9 +1,9 @@
 
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import img1 from '../../src/assets/images/img1.jpg'
-import img2 from '../../src/assets/images/img2.jpg'
-import img3 from '../../src/assets/images/img3.jpg'
+import img1 from '../../src/assets/images/imgStartSeite/img1.jpg'
+import img2 from '../../src/assets/images/imgStartSeite/img2.jpg'
+import img3 from '../../src/assets/images/imgStartSeite/img3.jpg'
 
 
 const images = [
@@ -48,8 +48,22 @@ const HeroCarousel = () => {
           <img
             src={image}
             alt={`Slide ${index + 1}`}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover z-0"
           />
+
+          {/* Overlay to contraste */}
+          <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
+
+          {/* 🔹 Texto centralizado acima do overlay */}
+          <div className="absolute z-20 inset-0 flex items-center justify-start">
+      <div className="ml-25 max-w-[600px]">
+        <h2
+         className="text-[#f9f3a2] text-5xl md:text-7xl font-extrabold leading-tight"> {/* #FAF070 */}
+        Welcome to <br /> Tanz der Kulturen
+        </h2>
+      </div>
+    </div>
+
         </div>
       ))}
 
