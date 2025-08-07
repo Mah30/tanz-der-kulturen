@@ -32,7 +32,7 @@ const QuoteSection = ({
             “{rightQuote}”
           </p>
         </div>
-      </div>
+      </div>  
 
       {/* right image */}
       <img
