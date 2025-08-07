@@ -54,7 +54,7 @@ const LoginPage = () => {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-300">
-      <Card className="w-full max-w-sm p-8 bg-gray-800 shadow-lg rounded-lg md:max-w-md lg:max-w-lg">
+      <Card className="w-full max-w-sm p-8 bg-[#13505a] shadow-lg rounded-lg md:max-w-md lg:max-w-lg">
         <h3 className="mb-4 text-center text-2xl font-bold text-white">Log In</h3>
 
         {error && <Alert color="failure">{error}</Alert>}

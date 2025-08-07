@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav style={{ color: '#027D8F' }}
-    className="hidden md:flex items-center text-sm font-medium text-gray-700">
+    <nav
+    className="hidden md:flex items-center text-[#027D8F] text-sm font-medium">
       <ul className="flex gap-6">
         {menuItems.map((menu) => (
           <MenuItems key={menu.title} menu={menu} />

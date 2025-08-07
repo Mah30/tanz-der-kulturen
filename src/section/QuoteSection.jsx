@@ -9,7 +9,7 @@ const QuoteSection = ({
 }) => {
 
   return (
-    <section className="w-screen flex items-center justify-between py-0 bg-gray-50">{/* w-screen */}
+    <section className="w-screen flex items-center justify-between py-0 bg-[#E0F5F7]">{/* w-screen */}
       {/* left image */}
       <img
         src={massa}

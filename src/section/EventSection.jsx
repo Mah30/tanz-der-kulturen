@@ -31,7 +31,7 @@ const dummyEvents = [
 
 const EventSection = () => {
   return (
-    <section className="py-12 px-4 bg-gray-50">
+    <section className="py-12 px-4 bg-gray-100">
       <h2 className="text-3xl font-bold text-center mb-8">Veranstaltungskalender</h2>
 
       <div className="flex flex-wrap justify-center gap-6">
