@@ -1,6 +1,6 @@
 import React from 'react';
-import massa from "../assets/images/massa.png"
-import stephanie from "../assets/images/stephanie.png"
+import massa from "../assets/images/imgStartSeite/massa.png"
+import stephanie from "../assets/images/imgStartSeite/stephanie.png"
 
 
 const QuoteSection = ({ 

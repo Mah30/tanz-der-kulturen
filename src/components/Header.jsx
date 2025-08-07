@@ -7,7 +7,9 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header className="flex justify-between items-center  px-8 py-2 shadow-sm bg-gray-200">
+    <header 
+    style={{ backgroundColor: '#E0F5F7' }} 
+    className="flex justify-between items-center  px-8 py-2 shadow-sm">
   
         <Link to="/" className="block w-54 h-auto">
           <img src={Logo} alt="Logo of tanz der kulturen" />
