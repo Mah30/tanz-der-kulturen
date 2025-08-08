@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import img1 from '../../src/assets/images/imgStartSeite/img1.jpg'
+import img1 from '../../src/assets/images/imgStartSeite/img1.png'
 import img2 from '../../src/assets/images/imgStartSeite/img2.jpg'
 import img3 from '../../src/assets/images/imgStartSeite/img3.jpg'
 
