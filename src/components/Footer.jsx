@@ -8,23 +8,23 @@ import Logo from '../assets/images/imgStartSeite/logo-tdk.png';
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-green-200 text-gray-900 pt-10 pb-6 px-6">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer className="bg-green-200 text-gray-900 pt-7 md:pt-10 pb-6 px-14 ">
+      <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8  justify-items-start ">
 
         
         <div>
-          <img
+          {/* <img
             src={Logo} 
             alt="Logo from Tanz der Kulturen Group"
             className="h-12 mb-2"
-          />
+          /> */}
            <p className="text-sm text-red-600 italic mt-4">Put a Slogan here</p> 
         </div>
 
        
         <div>
-          <h3 className="font-semibold mb-2">TANTZEVENTS</h3>
-          <ul className="space-y-1 text-sm">
+          <h3 className="font-semibold mb-2  text-left md:text-left">TANTZEVENTS</h3>
+          <ul className="space-y-1 text-sm text-left">
             <li><a href="/tanzevent/tanzworkshops" className="hover:underline">Tantzworkshops</a></li>
             <li><a href="tanzevent/Performances" className="hover:underline">Performances</a></li>
           </ul>
@@ -44,8 +44,8 @@ import Logo from '../assets/images/imgStartSeite/logo-tdk.png';
 
         
         <div>
-          <h3 className="font-semibold mb-2">ABOUT US</h3>
-          <ul className="space-y-1 text-sm">
+          <h3 className="font-semibold mb-2 text-left">ABOUT US</h3>
+          <ul className="space-y-1 text-sm text-left">
             <li><a href="/uber-uns/team" className="hover:underline">Wer wir sind</a></li>
             <li><a href="/uber-uns/testimonials" className="hover:underline">Testimonials</a></li>
             <li><a href="/uber-uns/team" className="hover:underline">Team</a></li>
@@ -54,7 +54,7 @@ import Logo from '../assets/images/imgStartSeite/logo-tdk.png';
       </div>
 
   
-      <div className="max-w-7xl mx-auto mt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-800 border-t border-white/30 pt-6">
+      <div className="max-w-7xl mx-auto mt-8 flex flex-col md:flex-row justify-center md:justify-between items-center text-sm text-gray-800 border-t border-white/50 pt-6">
 
         {/* icons */}
         <div className="flex space-x-4 mb-4 md:mb-0">

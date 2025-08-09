@@ -4,6 +4,7 @@ import { Card, Alert } from "flowbite-react";
 /* import { authService } from "../services/authService"; */
 /* import { SessionContext } from "../SessionContext/SessionContext"; */
 import LoginForm from "./LoginForm";
+ import Footer from "../../components/Footer";
 /* import { Spinner, Button, Card, TextInput, Label, Alert } from  */"flowbite-react";
 
 
@@ -51,29 +52,34 @@ const LoginPage = () => {
       setIsLoading(false);
     }
   };
-
+  
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gray-300">
-      <Card className="w-full max-w-sm p-8 bg-[#13505a] shadow-lg rounded-lg md:max-w-md lg:max-w-lg">
-        <h3 className="mb-4 text-center text-2xl font-bold text-white">Log In</h3>
+    <div className="flex min-h-screen flex-col bg-gray-300">
+      
+      <main className="flex-grow flex items-center justify-center px-4 py-12">
+        <Card className="w-full max-w-sm p-8 bg-[#13505a] shadow-lg rounded-lg md:max-w-md lg:max-w-lg">
+          <h3 className="mb-4 text-center text-2xl font-bold text-white">Log In</h3>
 
-        {error && <Alert color="failure">{error}</Alert>}
-        {success && <Alert color="success">{success}</Alert>}
+          {error && <Alert color="failure">{error}</Alert>}
+          {success && <Alert color="success">{success}</Alert>}
 
-        <LoginForm
-          email={email}
-          password={password}
-          isLoading={isLoading}
-          onEmailChange={(e) => setEmail(e.target.value)}
-          onPasswordChange={(e) => setPassword(e.target.value)}
-          onSubmit={handleSubmit}
-        />
+          <LoginForm
+            email={email}
+            password={password}
+            isLoading={isLoading}
+            onEmailChange={(e) => setEmail(e.target.value)}
+            onPasswordChange={(e) => setPassword(e.target.value)}
+            onSubmit={handleSubmit}
+          />
 
-        <div className="mt-4 flex justify-between text-sm">
-          <Link to="/" className="text-gray-400 hover:text-red-500">Back to Home</Link>
-          <Link to="/signup" className="text-gray-400 hover:text-red-500">Create an account</Link>
-        </div>
-      </Card>
+          <div className="mt-4 flex justify-between text-sm">
+            <Link to="/" className="text-gray-400 hover:text-red-500">Back to Home</Link>
+            <Link to="/signup" className="text-gray-400 hover:text-red-500">Create an account</Link>
+          </div>
+        </Card>
+      </main>
+
+      <Footer />
     </div>
   );
 }
