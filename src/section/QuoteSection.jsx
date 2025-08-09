@@ -4,8 +4,8 @@ import stephanie from "../assets/images/imgStartSeite/stephanie.png"
 
 
 const QuoteSection = ({ 
-  leftQuote="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, repudiandae. Magnam doloremque porro sunt modi inventore rem harum aspernatur, maxime exercitationem labore laudantium eligendi eos officia repudiandae. Labore, possimus deserunt? " ,
-  rightQuote="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam, repudiandae. Magnam doloremque porro sunt modi inventore rem harum aspernatur, maxime exercitationem labore laudantium eligendi eos officia repudiandae. Labore, possimus deserunt? " 
+  leftQuote="Was im Tanzritual geschieht, ist sowohl zutiefst persönlich als auch hochgradig politisch." ,
+  rightQuote='„Afrikanischer Tanz“? \nLasst uns unsere Gemeinsamkeiten feiern und \nunsere Unterschiede respektieren: \nDie Kunst, Gemeinschaft zu tanzen.' 
 }) => {
 
   return (
@@ -18,7 +18,7 @@ const QuoteSection = ({
       />
 
       {/* quotes and animations */}
-      <div className="flex flex-col md:flex-row items-center justify-between gap-6 w-full max-w-4xl px-4">
+      <div className="flex flex-col  md:flex-row items-center justify-between gap-6 w-full max-w-4xl px-4">
         {/* left quotes */}
         <div className="bg-gray-100 shadow-md rounded-xl p-4 w-full md:w-1/2 transform transition duration-300 hover:scale-105 hover:shadow-lg">
           <p className="text-gray-700 italic leading-relaxed">
@@ -28,7 +28,7 @@ const QuoteSection = ({
 
         {/* right quotes */}
         <div className="bg-gray-100 shadow-md rounded-xl p-4 w-full md:w-1/2 text-right transform transition duration-300 hover:scale-105 hover:shadow-lg">
-          <p className="text-gray-700 italic leading-relaxed">
+          <p className="whitespace-pre-line text-gray-700 italic leading-relaxed">
             “{rightQuote}”
           </p>
         </div>
