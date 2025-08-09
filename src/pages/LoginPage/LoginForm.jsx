@@ -42,13 +42,16 @@ const LoginForm = ({
 
       <Button
         type="submit"
-        className="w-full rounded-md bg-[#027D8F] py-2 text-lg font-semibold text-white shadow-md transition-all duration-300 hover:bg-[#315358] focus:outline-none focus:ring-4 focus:ring-red-500"
+        className="cursor-pointer w-full rounded-md bg-[#027D8F] py-2 text-lg font-semibold text-white shadow-md transition-all duration-300 hover:bg-[#315358] focus:outline-none focus:ring-4 focus:ring-red-500"
         disabled={isLoading}
       >
         {isLoading && <Spinner size="sm" className="mr-2" />}
         Sign In
       </Button>
     </form>
+    
+    
+
   );
 }
 

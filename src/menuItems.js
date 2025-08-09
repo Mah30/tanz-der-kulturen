@@ -30,6 +30,10 @@ export const menuItems = [
   },
   {
     title: "Kontakt",
-    
+    submenu: [
+      { title: "Anmeldung", url: "/anmeldung" },
+      { title: "Mitgliedschaft", url: "mitgliedschaft" },
+      { title: "Spenden", url: "/spenden" },
+    ]  
   },
 ];

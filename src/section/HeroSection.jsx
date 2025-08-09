@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import img1 from '../../src/assets/images/imgStartSeite/img1.jpg'
+import img1 from '../../src/assets/images/imgStartSeite/img1.png'
 import img2 from '../../src/assets/images/imgStartSeite/img2.jpg'
 import img3 from '../../src/assets/images/imgStartSeite/img3.jpg'
 
@@ -58,7 +58,7 @@ const HeroCarousel = () => {
           <div className="absolute z-20 inset-0 flex items-center justify-start">
       <div className="ml-25 max-w-[600px]">
         <h2
-         className="text-[#f9f3a2] text-5xl md:text-7xl font-extrabold leading-tight"> {/* #FAF070 */}
+         className="font-tussilago text-[#f9f3a2] text-5xl md:text-7xl leading-tight"> {/* #FAF070 */}
         Welcome to <br /> Tanz der Kulturen
         </h2>
       </div>

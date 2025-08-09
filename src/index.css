@@ -1,8 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 @import "tailwindcss";
+
 @plugin "flowbite-react/plugin/tailwindcss";
 @source "../.flowbite-react/class-list.json";
+
+  /* src/index.css – para fonte local (exemplo) */
+  @font-face {
+    font-family: 'tussilago';
+    src: url('./assets/fonts/tussilagorg-bold.otf') format('opentype');
+         /* url('./assets/fonts/minha-fonte.woff') format('woff'); */
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+  }
 
 
 html {
@@ -13,3 +24,4 @@ body {
     margin: 0;
     padding: 0;
   }
+

@@ -3,13 +3,16 @@ import { useNavigate, Link } from "react-router-dom";
 /* import { authService } from "../services/authService"; */
 /* import { SessionContext } from "../SessionContext/SessionContext"; */
 import SignupForm from "./SignupForm";
+import Footer from "../../components/Footer"
 
 
 const SignupPage = () => {
-    const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [form, setForm] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: ""
+  });
 
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -22,6 +25,11 @@ const SignupPage = () => {
     return <h2>Loading...</h2>;
   } */
 
+    const handleInputChange = (e) => {
+      const { name, value } = e.target;
+      setForm((prev) => ({ ...prev, [name]: value }));
+    };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
@@ -29,7 +37,7 @@ const SignupPage = () => {
     setSuccess("");
 
     try {
-      await authService.signup(firstName, lastName, email, password);
+      //await authService.signup(firstName, lastName, email, password);
       setSuccess("Account created successfully! Redirecting...");
       setTimeout(() => navigate("/login"), 1500);
     } catch (error) {
@@ -45,20 +53,19 @@ const SignupPage = () => {
   };
 
   return (
-    <SignupForm
-      firstName={firstName}
-      setFirstName={setFirstName}
-      lastName={lastName}
-      setLastName={setLastName}
-      email={email}
-      setEmail={setEmail}
-      password={password}
-      setPassword={setPassword}
-      isLoading={isLoading}
-      error={error}
-      success={success}
-      handleSubmit={handleSubmit}
-    />
+    <div className="flex min-h-screen flex-col bg-gray-300">
+      <main className="flex-grow flex items-center justify-center px-4 sm:px-6 lg:px-8 py-12">
+        <SignupForm
+          form={form}
+          onChange={handleInputChange}
+          onSubmit={handleSubmit}
+          isLoading={isLoading}
+          error={error}
+          success={success}
+        />
+      </main>
+      <Footer />
+    </div>
   );
 }
 export default SignupPage;

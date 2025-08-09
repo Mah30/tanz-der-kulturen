@@ -7,9 +7,7 @@ import TanzworkshopsPage from "./pages/Tanzevents/TanzworkshopsPage";
 import LoginPage from "./pages/LoginPage";
 import Performances from "./pages/Tanzevents/Performances";
 import SignupPage from "./pages/SignupPage"
-
-
-
+import Footer from "./components/Footer";
 
 
 
@@ -20,6 +18,7 @@ function App() {
   return (
     <div>
       <Header />
+      
    
 
       <Routes>
