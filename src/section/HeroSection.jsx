@@ -58,7 +58,7 @@ const HeroCarousel = () => {
           <div className="absolute z-20 inset-0 flex items-center justify-start">
       <div className="ml-25 max-w-[600px]">
         <h2
-         className="text-[#f9f3a2] text-5xl md:text-7xl font-extrabold leading-tight"> {/* #FAF070 */}
+         className="font-tussilago text-[#f9f3a2] text-5xl md:text-7xl leading-tight"> {/* #FAF070 */}
         Welcome to <br /> Tanz der Kulturen
         </h2>
       </div>

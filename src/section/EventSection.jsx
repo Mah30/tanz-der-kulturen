@@ -33,7 +33,7 @@ const dummyEvents = [
 const EventSection = () => {
   return (
     <section className="py-12 px-4 bg-gray-100">
-      <h2 className="text-3xl font-bold text- text-center mb-8">Veranstaltungskalender</h2>
+      <h2 className="text-3xl md:text-5xl font-bold text- text-center mb-8">Veranstaltungskalender</h2>
 
       <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-fr">
         {dummyEvents.map(({ id, day, month, title, description, workshopLeitung }) => (

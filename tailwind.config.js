@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ['Poppins', 'sans-serif'],
-        roboto: ['Roboto', 'sans-serif'],
+        roboto: ['"roboto"', 'sans-serif'],
+        tussilago: ['tussilago', 'sans-serif'],
       },
     },
   },

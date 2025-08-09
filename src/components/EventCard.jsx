@@ -6,7 +6,7 @@ const EventCard = ({ day, month, title, description, workshopLeitung }) => {
 
        {/* Header with date */}
       <header className="flex flex-col items-center justify-center mb-4">
-        <span className="text-5xl font-bold text-[#068d74] leading-tight">{day}</span>
+        <span className="text-3xl font-bold md:text-5xl text-[#068d74] leading-tight">{day}</span>
         <span className="text-sm md:text-xl uppercase text-gray-700">{month}</span>
       </header>
 
