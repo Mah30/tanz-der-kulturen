@@ -8,7 +8,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const handleCloseAll = () => setIsOpen(false); // fecha o painel mobile
+  const handleCloseAll = () => setIsOpen(false); // close the mobile painel
 
   return (
     <header className="relative flex justify-between items-center bg-[#E0F5F7] px-8 py-2 shadow-sm">
@@ -68,20 +68,20 @@ const Header = () => {
 
             {/* Login/Signup no mobile (inside the painel) */}
             <li className="mt-2 flex items-center gap-2">
-              <Link
+           {/*    <Link
                 to="/login"
                 onClick={handleCloseAll}
                 className="inline-flex items-center px-4 py-2 text-sm rounded hover:text-[#039FB5] transition"
               >
                 Log in
-              </Link>
-              <Link
+              </Link> */}
+            {/*   <Link
                 to="/signup"
                 onClick={handleCloseAll}
                 className="inline-flex items-center px-4 py-2 text-sm rounded bg-[#027D8F] text-white hover:bg-[#039FB5] transition"
               >
                 Sign up
-              </Link>
+              </Link> */}
             </li>
           </ul>
         </div>
