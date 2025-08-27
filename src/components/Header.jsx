@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { menuItems } from '../menuItems'; // para renderizar no painel mobile
 import MenuItems from './MenuItems';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,10 +26,10 @@ const Header = () => {
       {/* Right actions */}
       <div className="flex items-center gap-3">
         {/* Desktop buttons (hidden on mobile) */}
-        <div className="hidden md:flex gap-3">
+        {/* <div className="hidden md:flex gap-3">
           <Link
             to="/login"
-            className="rounded-lg bg-[#027D8F] px-5 py-2 text-sm font-medium text-white shadow-md transition-all duration-300 hover:bg-[#315358] focus:outline-none focus:ring-2 focus:ring-red-200"
+            className="hidden rounded-lg bg-[#027D8F] px-5 py-2 text-sm font-medium text-white shadow-md transition-all duration-300 hover:bg-[#315358] focus:outline-none focus:ring-2 focus:ring-red-200"
           >
             Login
           </Link>
@@ -38,7 +39,7 @@ const Header = () => {
           >
             Signup
           </Link>
-        </div>
+        </div> */}
 
         {/* Hamburger Menu - Mobile */}
         <button
@@ -82,6 +83,7 @@ const Header = () => {
               >
                 Sign up
               </Link> */}
+              <LanguageSwitcher />
             </li>
           </ul>
         </div>

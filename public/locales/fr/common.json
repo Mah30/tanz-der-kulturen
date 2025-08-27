@@ -1,0 +1,16 @@
+{
+    "greeting": "Bonjour",
+    "intro": "Bienvenue à Tanz der Kulturen",
+    "menu": {
+      "home": "Accueil",
+      "about": "À propos",
+      "contact": "Contact"
+    },
+    "lang": {
+      "label": "Langue",
+      "english": "Anglais",
+      "german": "Allemand",
+      "french": "Français"
+    }
+  }
+  
