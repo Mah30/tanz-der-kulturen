@@ -63,7 +63,12 @@ const Header = () => {
       {/*  Mobile Painel (column) */}
       {isOpen && (
         <div className="absolute left-0 top-full z-50 w-full md:hidden px-2 pb-4">
-          <ul className="mx-4 mr-70 mt-2 flex flex-col gap-1 bg-[#F5EDEF] backdrop-blur-md rounded-lg border border-white/20 shadow-lg p-2 text-[#027D8F] text-base">
+          <ul className=" 
+          mt-2 flex flex-col gap-1 
+          rounded-lg border border-white/20 bg-[#F5EDEF] p-2 
+          text-base  text-[#027D8F] backdrop-blur-md 
+          max-h-[80vh] overflow-y-auto overscroll-contain 
+          mx-4  ">
               {/* Menu items in a column*/}
             {menuItems.map(menu => (
               <MenuItems

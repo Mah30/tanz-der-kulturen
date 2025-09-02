@@ -86,7 +86,7 @@ const MenuItems = ({ menu, depthLevel = 0, onCloseAll }) => {
                   ? 'left-full top-0'
                   : ''
                 : 'hidden'
-            } absolute z-50 flex flex-col bg-[#F5EDEF]  rounded-lg  border border-white/20`}
+            } md:absolute z-50 flex flex-col  bg-[#F5EDEF]  rounded-lg  border border-white/20`}
           >
 
              {menu.submenu.map((item) => (
