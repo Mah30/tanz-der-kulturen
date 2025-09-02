@@ -1,45 +1,102 @@
 import React from 'react';
-import massa from "../assets/images/imgStartSeite/massa.png"
-import stephanie from "../assets/images/imgStartSeite/stephanie.png"
+import massa from "../assets/images/imgStartSeite/massa.png";
+import stephanie from "../assets/images/imgStartSeite/stephanie.png";
 
+//  auxiliar component to the quotes
+const QuoteBox = ({ children, align = "left" }) => (
+  <div
+    className={`
+      shadow-md rounded-xl p-4 w-full transform transition duration-300 
+      hover:scale-105 hover:shadow-lg
+      ${align === "right" ? "text-right" : ""}
+    `}
+  >
+    <p className="whitespace-pre-line text-gray-700 italic leading-relaxed">
+      {children}
+    </p>
+  </div>
+);
 
 const QuoteSection = ({ 
-  leftQuote="Was im Tanzritual geschieht, ist sowohl zutiefst persönlich als auch hochgradig politisch." ,
-  rightQuote='„Afrikanischer Tanz“? \nLasst uns unsere Gemeinsamkeiten feiern und \nunsere Unterschiede respektieren: \nDie Kunst, Gemeinschaft zu tanzen.' 
+  leftQuote = "„Afrikanischer Tanz“? \nLasst uns unsere Gemeinsamkeiten feiern und \nunsere Unterschiede respektieren: \nDie Kunst, Gemeinschaft zu tanzen." ,
+  rightQuote = "Was im Tanzritual geschieht, ist sowohl zutiefst persönlich als auch hochgradig politisch." 
 }) => {
+  
+  // images constants
+  const leftImage = {
+    src: massa,
+    alt: "Profile image of a Black man with a beard, calm expression, looking straight ahead toward the woman."
+  };
+
+  const rightImage = {
+    src: stephanie,
+    alt: "Profile image of a white woman, smiling, looking straight ahead toward the man."
+  };
 
   return (
-    <section className="w-screen flex items-center justify-between py-0 bg-[#E0F5F7]">{/* w-screen */}
-      {/* left image */}
-      <img
-        src={massa}
-        alt="Profile image of a Black man with a beard, calm expression, looking straight ahead toward the woman."
-        className="w-42 h-auto md:w-52 md:h-auto object-cover m-0"
-      />
-
-      {/* quotes and animations */}
-      <div className="flex flex-col  md:flex-row items-center justify-between gap-6 w-full max-w-4xl px-4">
-        {/* left quotes */}
-        <div className="bg-gray-100 shadow-md rounded-xl p-4 w-full md:w-1/2 transform transition duration-300 hover:scale-105 hover:shadow-lg">
-          <p className="text-gray-700 italic leading-relaxed">
-            “{leftQuote}”
-          </p>
+    <section className="relative w-full bg-[#E0F5F7] overflow-hidden">
+      {/* ===== MOBILE ===== */}
+      <div className="md:hidden">
+        <div className="flex items-center justify-between px-1 py-10">
+          {/* left image */}
+          <img
+            src={leftImage.src}
+            alt={leftImage.alt}
+            className="m-0 object-cover h-auto w-28 sm:w-32 shrink-0 max-w-[45vw] translate-x-3"
+          />
+          {/* right image */}
+          <img
+            src={rightImage.src}
+            alt={rightImage.alt}
+            className="m-0 object-cover h-auto w-24 sm:w-28 shrink-0 max-w-[45vw] -translate-x-3"
+          />
         </div>
 
-        {/* right quotes */}
-        <div className="bg-gray-100 shadow-md rounded-xl p-4 w-full md:w-1/2 text-right transform transition duration-300 hover:scale-105 hover:shadow-lg">
-          <p className="whitespace-pre-line text-gray-700 italic leading-relaxed">
-            “{rightQuote}”
-          </p>
+        {/* quotes overlay on mobile */}
+        <div className="absolute left-1/2 top-1/2 z-10 w-full max-w-sm -translate-x-1/2 -translate-y-1/2 px-4">
+          <div className='bg-white/60 backdrop-blur-sm rounded-xl p-4 w-full mb-1 mt-4'>
+            <QuoteBox>“{leftQuote}”</QuoteBox>
+          </div>
+          
+          <div className="h-4" /> {/* self-closing tag */}
+          
+          <div className="bg-white/60 backdrop-blur-sm rounded-xl">
+            <QuoteBox align="right">“{rightQuote}”</QuoteBox>
+          </div>
         </div>
-      </div>  
 
-      {/* right image */}
-      <img
-        src={stephanie}
-        alt="Profile image of a white woman, smiling, looking straight ahead toward the man."
-        className="w-36 h-auto md:w-48 md:h-auto object-cover m-0"
-      />
+      </div>
+
+
+
+      {/* ===== WEB/DESKTOP ===== */}
+      <div className="hidden md:flex items-center justify-between py-0">
+        {/* left image */}
+        <img
+          src={leftImage.src}
+          alt={leftImage.alt}
+          className="m-0 object-cover h-auto w-40 lg:w-48 shrink-0"
+        />
+
+        {/* quotes side by side, without overlay */}
+        <div className="flex items-center justify-between gap-6 w-full max-w-4xl px-4">
+          <div className='bg-gray-100 rounded-xl shadow-md'>
+            <QuoteBox>“{leftQuote}”</QuoteBox>
+          </div>
+          
+          <div className="bg-gray-100 rounded-xl shadow-md">
+            <QuoteBox align="right">“{rightQuote}”</QuoteBox>
+          </div>
+          
+        </div>
+
+        {/* right image */}
+        <img
+          src={rightImage.src}
+          alt={rightImage.alt}
+          className="m-0 object-cover h-auto w-36 lg:w-44 shrink-0"
+        />
+      </div>
     </section>
   );
 };

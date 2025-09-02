@@ -5,17 +5,22 @@ import { Link } from 'react-router-dom';
 import { menuItems } from '../menuItems'; // para renderizar no painel mobile
 import MenuItems from './MenuItems';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import { useTranslation } from 'react-i18next';
 import LanguageSwitcher from './LanguageSwitcher';
+
+
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleCloseAll = () => setIsOpen(false); // close the mobile painel
+  
+  const { t } = useTranslation('common');
 
   return (
     <header className="relative flex justify-between items-center bg-[#E0F5F7] px-8 py-2 shadow-sm">
       {/* Left Logo */}
       <Link to="/" className="block w-54 h-auto">
-        <img src={Logo} alt="Logo of tanz der kulturen" />
+        <img src={Logo} alt={t('header.logoAlt')} />
       </Link>
 
       {/* Central Navbar - nur Desktop */}
@@ -26,8 +31,8 @@ const Header = () => {
       {/* Right actions */}
       <div className="flex items-center gap-3">
         {/* Desktop buttons (hidden on mobile) */}
-        {/* <div className="hidden md:flex gap-3">
-          <Link
+         <div className="hidden md:flex gap-3">
+          {/* <Link
             to="/login"
             className="hidden rounded-lg bg-[#027D8F] px-5 py-2 text-sm font-medium text-white shadow-md transition-all duration-300 hover:bg-[#315358] focus:outline-none focus:ring-2 focus:ring-red-200"
           >
@@ -38,8 +43,10 @@ const Header = () => {
             className="rounded-lg bg-[#027D8F] px-5 py-2 text-sm font-medium text-white shadow-md transition-all duration-300 hover:bg-[#315358] focus:outline-none focus:ring-2 focus:ring-red-200"
           >
             Signup
-          </Link>
-        </div> */}
+          </Link> */}
+          <h1>{t('intro')}</h1>
+          <LanguageSwitcher />
+        </div>
 
         {/* Hamburger Menu - Mobile */}
         <button
