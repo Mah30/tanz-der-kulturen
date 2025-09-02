@@ -4,8 +4,8 @@ import i18n from '../i18n';
 
 const LANGS = [
   { code: 'en', label: 'English', flag: '🇬🇧' },
-  { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
-  { code: 'fr', label: 'Français', flag: '🇫🇷' },
+  { code: 'de', label: 'Deutsch', flag: '🇩🇪' }
+  /* { code: 'fr', label: 'Français', flag: '🇫🇷' }, */
 ];
 
 

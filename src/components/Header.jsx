@@ -32,18 +32,7 @@ const Header = () => {
       <div className="flex items-center gap-3">
         {/* Desktop buttons (hidden on mobile) */}
          <div className="hidden md:flex gap-3">
-          {/* <Link
-            to="/login"
-            className="hidden rounded-lg bg-[#027D8F] px-5 py-2 text-sm font-medium text-white shadow-md transition-all duration-300 hover:bg-[#315358] focus:outline-none focus:ring-2 focus:ring-red-200"
-          >
-            Login
-          </Link>
-          <Link
-            to="/signup"
-            className="rounded-lg bg-[#027D8F] px-5 py-2 text-sm font-medium text-white shadow-md transition-all duration-300 hover:bg-[#315358] focus:outline-none focus:ring-2 focus:ring-red-200"
-          >
-            Signup
-          </Link> */}
+
           <h1>{t('intro')}</h1>
           <LanguageSwitcher />
         </div>
@@ -81,20 +70,7 @@ const Header = () => {
 
             {/* Login/Signup no mobile (inside the painel) */}
             <li className="mt-2 flex items-center gap-2">
-           {/*    <Link
-                to="/login"
-                onClick={handleCloseAll}
-                className="inline-flex items-center px-4 py-2 text-sm rounded hover:text-[#039FB5] transition"
-              >
-                Log in
-              </Link> */}
-            {/*   <Link
-                to="/signup"
-                onClick={handleCloseAll}
-                className="inline-flex items-center px-4 py-2 text-sm rounded bg-[#027D8F] text-white hover:bg-[#039FB5] transition"
-              >
-                Sign up
-              </Link> */}
+              
               <LanguageSwitcher />
             </li>
           </ul>
