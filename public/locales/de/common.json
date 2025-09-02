@@ -1,0 +1,16 @@
+{
+    "greeting": "Hallo",
+    "intro": "",
+    "menu": {
+      "home": "Startseite",
+      "about": "Über uns",
+      "contact": "Kontakt"
+    },
+    "lang": {
+      "label": "Sprache",
+      "english": "Englisch",
+      "german": "Deutsch",
+      "french": "Französisch"
+    }
+  }
+

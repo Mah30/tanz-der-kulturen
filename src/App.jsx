@@ -4,9 +4,9 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Contact from "./pages/Kontakt";
 import TanzworkshopsPage from "./pages/Tanzevents/TanzworkshopsPage";
-import LoginPage from "./pages/LoginPage";
+/* import LoginPage from "./pages/LoginPage"; */
 import Performances from "./pages/Tanzevents/Performances";
-import SignupPage from "./pages/SignupPage"
+/* import SignupPage from "./pages/SignupPage" */
 import Footer from "./components/Footer";
 
 
@@ -28,8 +28,8 @@ function App() {
         <Route path="/tanzevent/tanzworkshops" element={<TanzworkshopsPage />} />
         <Route path="/tanzevent/Performances" element={<Performances />} />
 
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signup" element={<SignupPage />} />
+       {/*  <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} /> */}
       </Routes>
     </div>
     
