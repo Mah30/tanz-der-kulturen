@@ -36,35 +36,30 @@ const QuoteSection = ({
   return (
     <section className="relative w-full bg-[#E0F5F7] overflow-hidden">
       {/* ===== MOBILE ===== */}
-      <div className="md:hidden">
-        <div className="flex items-center justify-between px-1 py-10">
+      <div className="md:hidden class grid justify-center">
           {/* left image */}
           <img
             src={leftImage.src}
             alt={leftImage.alt}
-            className="m-0 object-cover h-auto w-28 sm:w-32 shrink-0 max-w-[45vw] translate-x-3"
+            className="absolute left-0 object-contain h-full w-auto max-w-[47.6vw]"
           />
           {/* right image */}
           <img
             src={rightImage.src}
             alt={rightImage.alt}
-            className="m-0 object-cover h-auto w-24 sm:w-28 shrink-0 max-w-[45vw] -translate-x-3"
+            className="absolute right-0 object-contain h-full w-auto max-w-[43vw]"
           />
-        </div>
 
         {/* quotes overlay on mobile */}
-        <div className="absolute left-1/2 top-1/2 z-10 w-full max-w-sm -translate-x-1/2 -translate-y-1/2 px-4">
-          <div className='bg-white/60 backdrop-blur-sm rounded-xl p-4 w-full mb-1 mt-4'>
+        <div className="py-4 flex flex-col gap-4 items-center max-w-sm px-4">
+          <div className='bg-white/60 backdrop-blur-sm rounded-xl w-full'>
             <QuoteBox>“{leftQuote}”</QuoteBox>
           </div>
           
-          <div className="h-4" /> {/* self-closing tag */}
-          
-          <div className="bg-white/60 backdrop-blur-sm rounded-xl">
+          <div className="bg-white/60 backdrop-blur-sm rounded-xl w-full">
             <QuoteBox align="right">“{rightQuote}”</QuoteBox>
           </div>
         </div>
-
       </div>
 
 
