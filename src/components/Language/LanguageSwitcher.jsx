@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { GlobeAltIcon, CheckIcon } from '@heroicons/react/24/outline';
-import i18n from '../i18n';
+import i18n from '../../i18n';
 
 const LANGS = [
   { code: 'en', label: 'English', flag: '🇬🇧' },
@@ -10,7 +10,7 @@ const LANGS = [
 
 
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = ({onChangedLanguage}) => {
   // Menu state
   const [open, setOpen] = useState(false);
   const btnRef = useRef(null);
@@ -52,6 +52,7 @@ const LanguageSwitcher = () => {
     await i18n.changeLanguage(code);
     document.documentElement.setAttribute('lang', code);
     setOpen(false);
+    if (typeof onChangedLanguage === 'function') onChangedLanguage(); //close mobile painel
   }
 
   const current = i18n.resolvedLanguage || i18n.language || 'en';
