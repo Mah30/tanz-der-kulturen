@@ -1,10 +1,12 @@
 {
+    "brandName": "Tanz der Kulturen",
     "greeting": "Hello",
     "intro": "",
     "menu": {
       "home": "Home",
       "about": "About",
-      "contact": "Contact"
+      "contact": "Contact",
+      "header": { "toggleMenu": "Toggle menu", "logoAlt": "Tanz der Kulturen" }
     },
     "lang": {
       "label": "Language",

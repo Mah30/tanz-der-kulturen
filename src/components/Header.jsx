@@ -2,11 +2,11 @@ import { useState } from 'react';
 import Navbar from './Navbar';
 import Logo from '../assets/images/imgStartSeite/logo-tdk.png';
 import { Link } from 'react-router-dom';
-import { menuItems } from '../menuItems'; // para renderizar no painel mobile
+import menuItems from '../menuItems'; // para renderizar no painel mobile
 import MenuItems from './MenuItems';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from './LanguageSwitcher';
+import I18nControls from './Language/I18nControls';
 
 
 
@@ -15,6 +15,7 @@ const Header = () => {
   const handleCloseAll = () => setIsOpen(false); // close the mobile painel
   
   const { t } = useTranslation('common');
+  
 
   return (
     <header className="relative flex justify-between items-center bg-[#E0F5F7] px-8 py-2 shadow-sm">
@@ -31,16 +32,14 @@ const Header = () => {
       {/* Right actions */}
       <div className="flex items-center gap-3">
         {/* Desktop buttons (hidden on mobile) */}
-         <div className="hidden md:flex gap-3">
-
-          <h1>{t('intro')}</h1>
-          <LanguageSwitcher />
-        </div>
+          <div className="hidden md:flex">
+            <I18nControls textAs="p" />     
+          </div>
 
         {/* Hamburger Menu - Mobile */}
         <button
           type="button"
-          aria-label="Toggle menu"
+          aria-label={t('header.toggleMenu')} /* "toggleMenu" */
           aria-expanded={isOpen ? 'true' : 'false'}
           className="md:hidden cursor-pointer inline-flex items-center justify-center p-2 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#027D8F]/40"
           onClick={() => setIsOpen(v => !v)}
@@ -49,7 +48,7 @@ const Header = () => {
         </button>
       </div>
 
-      {/*  Mobile Painel (column) */}
+      {/*  Mobile Panel (column) */}
       {isOpen && (
         <div className="absolute left-0 top-full z-50 w-full md:hidden px-2 pb-4">
           <ul className=" 
@@ -59,7 +58,7 @@ const Header = () => {
           max-h-[80vh] overflow-y-auto overscroll-contain 
           mx-4  ">
               {/* Menu items in a column*/}
-            {menuItems.map(menu => (
+            {menuItems(t).map((menu) => (
               <MenuItems
                 key={menu.title}
                 menu={menu}
@@ -71,7 +70,7 @@ const Header = () => {
             {/* Login/Signup no mobile (inside the painel) */}
             <li className="mt-2 flex items-center gap-2">
               
-              <LanguageSwitcher />
+              <I18nControls textAs="p" />
             </li>
           </ul>
         </div>
