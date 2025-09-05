@@ -2,11 +2,10 @@ import { useState } from 'react';
 import Navbar from './Navbar';
 import Logo from '../assets/images/imgStartSeite/logo-tdk.png';
 import { Link } from 'react-router-dom';
-import { menuItems } from '../menuItems'; // para renderizar no painel mobile
+import menuItems from '../menuItems'; // para renderizar no painel mobile
 import MenuItems from './MenuItems';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from './Language/LanguageSwitcher';
 import I18nControls from './Language/I18nControls';
 
 
@@ -16,6 +15,7 @@ const Header = () => {
   const handleCloseAll = () => setIsOpen(false); // close the mobile painel
   
   const { t } = useTranslation('common');
+  
 
   return (
     <header className="relative flex justify-between items-center bg-[#E0F5F7] px-8 py-2 shadow-sm">
@@ -58,7 +58,7 @@ const Header = () => {
           max-h-[80vh] overflow-y-auto overscroll-contain 
           mx-4  ">
               {/* Menu items in a column*/}
-            {menuItems.map((menu) => (
+            {menuItems(t).map((menu) => (
               <MenuItems
                 key={menu.title}
                 menu={menu}

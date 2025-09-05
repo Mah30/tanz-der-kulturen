@@ -1,6 +1,6 @@
-export const menuItems = [
+ const menuItems = (t) => [
   {
-    title: 'Home',
+    title: t("menu.home"),
     url: '/',
   },
   {
@@ -37,3 +37,5 @@ export const menuItems = [
     ]  
   },
 ];
+
+export default menuItems;
