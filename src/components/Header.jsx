@@ -13,8 +13,10 @@ import I18nControls from './Language/I18nControls';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const handleCloseAll = () => setIsOpen(false); // close the mobile painel
-  
+
   const { t } = useTranslation('common');
+  const items = menuItems(t); 
+
   
 
   return (
@@ -58,12 +60,12 @@ const Header = () => {
           max-h-[80vh] overflow-y-auto overscroll-contain 
           mx-4  ">
               {/* Menu items in a column*/}
-            {menuItems(t).map((menu) => (
+            {items.map((menu) => (
               <MenuItems
-                key={menu.title}
+                key={menu.key}
                 menu={menu}
                 depthLevel={0}
-                onCloseAll={(handleCloseAll)} 
+                onCloseAll={handleCloseAll} 
               />
             ))}
 
