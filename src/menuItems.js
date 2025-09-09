@@ -1,41 +1,47 @@
  const menuItems = (t) => [
   {
+    key: "home",
     title: t("menu.home"),
     url: '/',
   },
   {
+    key: "tanzevents",
     title: "Tanzevents", // Level 0
     submenu: [
-      {title: "Tanzworkshops", url:"/tanzevent/tanzworkshops"},
-      {title: "Performances", url:"/tanzevent/performances"}
-    ]
+      {key: "tanzworkshops", title: "Tanzworkshops", url:"/tanzevent/tanzworkshops"},
+      {key: "performances", title: "Performances", url:"/tanzevent/performances"}
+    ],
   },
   {
+    key: "weiterbildung",
     title: "Weiterbildung",
     submenu: [
-      { title: "Aufbau + Termine", url: "/weiterbildung/aufbau-termine"},
-      { title: "Konzept", url: "/weiterbildung/konzept" },
-      { title: "Buch", url: "/weiterbildung/buch" },
-      { title: "Lernplattform", url: "/weiterbildung/lernplattform" },
-      { title: "Anmeldung", url: "/weiterbildung/anmeldung" },
-    ]
+      { key: "aufbau-termine", title: "Aufbau + Termine", url: "/weiterbildung/aufbau-termine" },
+      { key: "konzept", title: "Konzept", url: "/weiterbildung/konzept" },
+      { key: "buch", title: "Buch", url: "/weiterbildung/buch" },
+      { key: "lernplattform", title: "Lernplattform", url: "/weiterbildung/lernplattform" },
+      { key: "anmeldung-weiterbildung", title: "Anmeldung", url: "/weiterbildung/anmeldung" },
+    ],
   },
   {
+    key: "uber-uns",
     title: "Über uns",
     submenu: [
-      { title: "Wer wir sind", url: "/uber-uns/team" },
-      { title: "Testimonials", url: "/uber-uns/testimonials" },
-      { title: "Team", url: "/uber-uns/team" },
-    ]
+      { key: "wer-wir-sind", title: "Wer wir sind", url: "/uber-uns/team" },
+      { key: "testimonials", title: "Testimonials", url: "/uber-uns/testimonials" },
+      { key: "team", title: "Team", url: "/uber-uns/team" },
+    ],
   },
   {
+    key: "kontakt",
     title: "Kontakt",
     submenu: [
-      { title: "Anmeldung", url: "/anmeldung" },
-      { title: "Mitgliedschaft", url: "mitgliedschaft" },
-      { title: "Spenden", url: "/spenden" },
-    ]  
+      { key: "anmeldung-kontakt", title: "Anmeldung", url: "/kontakt/anmeldung" },
+      { key: "mitgliedschaft", title: "Mitgliedschaft", url: "/kontakt/mitgliedschaft" },
+      { key: "spenden", title: "Spenden", url: "/kontakt/spenden" },
+    ],
   },
 ];
+
 
 export default menuItems;
