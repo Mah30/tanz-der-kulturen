@@ -90,7 +90,7 @@ const MenuItems = ({ menu, depthLevel = 0, onCloseAll }) => {
              {menu.submenu.map((item) => (
                
                   <MenuItems
-                    key={item.title}
+                    key={item.key}
                     depthLevel={depthLevel + 1}
                     menu={item}
                     onCloseAll={() => {

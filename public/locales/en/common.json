@@ -1,18 +1,37 @@
 {
-    "brandName": "Tanz der Kulturen",
-    "greeting": "Hello",
-    "intro": "",
-    "menu": {
-      "home": "Home",
-      "about": "About",
-      "contact": "Contact",
-      "header": { "toggleMenu": "Toggle menu", "logoAlt": "Tanz der Kulturen" }
-    },
-    "lang": {
-      "label": "Language",
-      "english": "English",
-      "german": "German"
-      
-    }
+  "header": {
+    "logoAlt": "Tanz der Kulturen — logo",
+    "toggleMenu": "Toggle menu"
+  },
+  "menu": {
+    "home": "Home",
+
+    "tanzevents": "Dance Events",
+    "tanzworkshops": "Dance workshops",
+    "performances": "Performances",
+    "tanzreise":"Dance Trip",
+
+    "weiterbildung": "Training",
+    "aufbau-termine": "Structure + Dates",
+    "konzept": "Concept",
+    "buch": "Book",
+    "lernplattform": "Learning Platform",
+    "anmeldung-weiterbildung": "Registration",
+
+    "uber-uns": "About Us",
+    "unser-werte": "Our Values",
+    "unser-team": "Our Team",
+    "vergangene-projekte": "Past Projects",
+    "testimonials": "Testimonials",
+
+    "kontakt": "Contact",
+    "so-erreichst-du-uns": "How to Reach us",
+    "mitglied-werden": "Become a member",
+    "spenden": "Donations",
+    "open-call": "Open Call",
+    "kooperation": "Cooperation"
   }
+}
+
+
   

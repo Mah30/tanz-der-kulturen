@@ -1,40 +1,118 @@
- const menuItems = (t) => [
+const menuItems = (t) => [
   {
+    key: "home",
     title: t("menu.home"),
-    url: '/',
+    url: "/",
   },
   {
-    title: "Tanzevents", // Level 0
+    key: "tanzevents",
+    title: t("menu.tanzevents"),
     submenu: [
-      {title: "Tanzworkshops", url:"/tanzevent/tanzworkshops"},
-      {title: "Performances", url:"/tanzevent/performances"}
-    ]
+      {
+        key: "tanzworkshops",
+        title: t("menu.tanzworkshops"),
+        url: "/tanzevent/tanzworkshops",
+      },
+      {
+        key: "performances",
+        title: t("menu.performances"),
+        url: "/tanzevent/performances",
+      },
+      {
+        key: "tanzreise",
+        title: t("menu.tanzreise"),
+        url: "/tanzevent/tanzreise",
+      },
+    ],
   },
   {
-    title: "Weiterbildung",
+    key: "weiterbildung",
+    title: t("menu.weiterbildung"),
     submenu: [
-      { title: "Aufbau + Termine", url: "/weiterbildung/aufbau-termine"},
-      { title: "Konzept", url: "/weiterbildung/konzept" },
-      { title: "Buch", url: "/weiterbildung/buch" },
-      { title: "Lernplattform", url: "/weiterbildung/lernplattform" },
-      { title: "Anmeldung", url: "/weiterbildung/anmeldung" },
-    ]
+      {
+        key: "aufbau-termine",
+        title: t("menu.aufbau-termine"),
+        url: "/weiterbildung/aufbau-termine",
+      },
+      {
+        key: "konzept",
+        title: t("menu.konzept"),
+        url: "/weiterbildung/konzept",
+      },
+      {
+        key: "buch",
+        title: t("menu.buch"),
+        url: "/weiterbildung/buch",
+      },
+      {
+        key: "lernplattform",
+        title: t("menu.lernplattform"),
+        url: "/weiterbildung/lernplattform",
+      },
+      {
+        key: "anmeldung-weiterbildung",
+        title: t("menu.anmeldung-weiterbildung"),
+        url: "/weiterbildung/anmeldung",
+      },
+    ],
   },
   {
-    title: "Über uns",
+    key: "uber-uns",
+    title: t("menu.uber-uns"),
     submenu: [
-      { title: "Wer wir sind", url: "/uber-uns/team" },
-      { title: "Testimonials", url: "/uber-uns/testimonials" },
-      { title: "Team", url: "/uber-uns/team" },
-    ]
+      {
+        key: "unser-werte",
+        title: t("menu.unser-werte"),
+        url: "/uber-uns/unser-werte",
+      },
+      {
+        key: "unser-team",
+        title: t("menu.unser-team"),
+        url: "/uber-uns/unser-team",
+      },
+      {
+        key: "vergangene-projekte",
+        title: t("menu.vergangene-projekte"),
+        url: "/uber-uns/vergangene-projekte",
+      },
+      {
+        key: "testimonials",
+        title: t("menu.testimonials"),
+        url: "/uber-uns/testimonials",
+      },
+      
+    ],
   },
   {
-    title: "Kontakt",
+    key: "kontakt",
+    title: t("menu.kontakt"),
     submenu: [
-      { title: "Anmeldung", url: "/anmeldung" },
-      { title: "Mitgliedschaft", url: "mitgliedschaft" },
-      { title: "Spenden", url: "/spenden" },
-    ]  
+      {
+        key: "so-erreichst-du-uns",
+        title: t("menu.so-erreichst-du-uns"),
+        url: "/kontakt/so-erreichst-du-uns",
+      },
+      {
+        key: "mitglied-werden",
+        title: t("menu.mitglied-werden"),
+        url: "/kontakt/mitglied-werden",
+      },
+      {
+        key: "spenden",
+        title: t("menu.spenden"),
+        url: "/kontakt/spenden",
+      },
+      {
+        key: "open-call",
+        title: t("menu.open-call"),
+        url: "/kontakt/open-call",
+      },
+      {
+        key: "kooperation",
+        title: t("menu.kooperation"),
+        url: "/kontakt/kooperation",
+      },
+    ],
   },
 ];
 
