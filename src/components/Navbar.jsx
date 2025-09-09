@@ -6,13 +6,22 @@ import MenuItems from "./MenuItems";
 
 
 const Navbar = () => {
-  const { t} = useTranslation("common")
+  const { t } = useTranslation("common")
+
+  const items = menuItems(t); 
+
+
+
+
+
   return (
     <nav
-    className="hidden md:flex items-center text-[#027D8F] text-sm md:text-lg font-medium bg">
-      <ul className="flex gap-6">
-        {menuItems(t).map((menu) => (
-          <MenuItems key={menu.title} menu={menu} />
+      aria-label="Hauptnavigation"
+      className="hidden md:flex items-center text-[#027D8F] text-sm md:text-lg font-medium bg"
+    >
+      <ul className="flex gap-6" role="menubar">
+        {items.map((menu) => (
+          <MenuItems key={menu.key} menu={menu} />
         ))}
       </ul>
     </nav>
