@@ -1,0 +1,54 @@
+{
+  "greeting": "Hallo",
+  "intro": "",
+  "menu": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "tanzevents": "Tanzveranstaltungen",
+    "tanzworkshops": "Tanzworkshops",
+    "performances": "Aufführungen",
+    "further_education": "Weiterbildung",
+    "schedule": "Aufbau + Termine",
+    "concept": "Konzept",
+    "book": "Buch",
+    "learning_platform": "Lernplattform",
+    "registration": "Anmeldung",
+    "about_us": "Über uns",
+    "who_we_are": "Wer wir sind",
+    "testimonials": "Testimonials",
+    "team": "Team",
+    "membership": "Mitgliedschaft",
+    "donate": "Spenden"
+  },
+  "lang": {
+    "label": "Sprache",
+    "english": "Englisch",
+    "german": "Deutsch"
+  },
+  "header": {
+    "toggleMenu": "Menü umschalten",
+    "logoAlt": "Tanz der Kulturen"
+  },
+  "footer": {
+    "logoAlt": "Logo der Tanz der Kulturen Gruppe",
+    "slogan": "Hier einen Slogan einfügen",
+    "Dance_Events": "TANZ-EVENTS",
+    "Dance_Workshops": "Tanzworkshops",
+    "Performances": "Aufführungen",
+    "further_education": "WEITERBILDUNG",
+    "Schedule": "Aufbau + Termine",
+    "Concept": "Konzept",
+    "Book": "Buch",
+    "Learning_platform": "Lernplattform",
+    "Registration": "Anmeldung",
+    "About_us": "ÜBER UNS",
+    "who_we_are": "Wer wir sind",
+    "Testimonials": "Testimonials",
+    "Team": "Team",
+    "Imprint": "Impressum",
+    "Privacy_policy": "Datenschutzrichtlinie",
+    "Terms_of_use": "Nutzungsbedingungen",
+    "all_rights_reserved": "Alle Rechte vorbehalten"
+  }
+}

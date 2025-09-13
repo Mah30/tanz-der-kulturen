@@ -1,0 +1,55 @@
+{
+  "brandName": "Tanz der Kulturen",
+  "greeting": "Hello",
+  "intro": "",
+  "menu": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "tanzevents": "Dance Events",
+    "tanzworkshops": "Dance Workshops",
+    "performances": "Performances",
+    "further_education": "Further Education",
+    "schedule": "Schedule",
+    "concept": "Concept",
+    "book": "Book",
+    "learning_platform": "Learning Platform",
+    "registration": "Registration",
+    "about_us": "About Us",
+    "who_we_are": "Who We Are",
+    "testimonials": "Testimonials",
+    "team": "Team",
+    "membership": "Membership",
+    "donate": "Donate",
+    "header": {
+      "toggleMenu": "Toggle menu",
+      "logoAlt": "Tanz der Kulturen"
+    }
+  },
+  "lang": {
+    "label": "Language",
+    "english": "English",
+    "german": "German"
+  },
+  "footer": {
+    "logoAlt": "Logo from Tanz der Kulturen Group",
+    "slogan": "Put a Slogan here",
+    "Dance_Events": "DANCE EVENTS",
+    "Dance_Workshops": "Dance Workshops",
+    "Performances": "Performances",
+    "further_education": "FURTHER EDUCATION",
+    "Schedule": "Schedule",
+    "Concept": "Concept",
+    "Book": "Book",
+    "Learning_platform": "Learning Platform",
+    "Registration": "Registration",
+    "About_us": "ABOUT US",
+    "who_we_are": "Who We Are",
+    "Testimonials": "Testimonials",
+    "Team": "Team",
+    "Imprint": "Imprint",
+    "Privacy_policy": "Privacy Policy",
+    "Terms_of_use": "Terms of Use",
+    "all_rights_reserved": "All rights reserved"
+  }
+}
