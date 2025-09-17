@@ -3,6 +3,11 @@
     "logoAlt": "Tanz der Kulturen – Logo",
     "toggleMenu": "Menü ein-/ausblenden"
   },
+
+  "homepage": {
+    "subtitle": "Alle Körper und Erfahrungen sind willkommen!"
+  },
+
   "menu": {
     "home": "Startseite",
 
@@ -24,7 +29,6 @@
     "vergangene-projekte": "Vergangene Projekte",
     "testimonials": "Testimonials",
     
-
     "kontakt": "Kontakt",
     "so-erreichst-du-uns": "So erreichst Du uns",
     "mitglied-werden": "Mitglied werden",
