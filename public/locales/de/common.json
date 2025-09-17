@@ -4,10 +4,6 @@
     "toggleMenu": "Menü ein-/ausblenden"
   },
 
-  "homepage": {
-    "subtitle": "Alle Körper und Erfahrungen sind willkommen!"
-  },
-
   "menu": {
     "home": "Startseite",
 
@@ -35,6 +31,17 @@
     "spenden": "Spenden",
     "open-call": "Open Call",
     "kooperation": "Kooperation"
+  },
+
+  "homepage": {
+    "subtitle": "Alle Körper und Erfahrungen sind willkommen!",
+    "quotes": {
+      "left": "„Afrikanischer Tanz“? \nLasst uns unsere Gemeinsamkeiten feiern und \nunsere Unterschiede respektieren: \nDie Kunst, Gemeinschaft zu tanzen.",
+      "right": "Was im Tanzritual geschieht, ist sowohl zutiefst persönlich als auch hochgradig politisch.",
+      "leftImageAlt": "Profilbild eines schwarzen Mannes mit Bart, ruhiger Ausdruck, schaut geradeaus zur Frau.",
+      "rightImageAlt": "Profilbild einer weißen Frau, lächelnd, schaut geradeaus zum Mann."
+    }
   }
+
 }
 

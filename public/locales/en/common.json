@@ -4,10 +4,6 @@
     "toggleMenu": "Toggle menu"
   },
 
-  "homepage": {
-    "subtitle": "All bodies and experiences are welcome!"
-  },
-
   "menu": {
     "home": "Home",
 
@@ -35,7 +31,20 @@
     "spenden": "Donations",
     "open-call": "Open Call",
     "kooperation": "Cooperation"
+  },
+
+  "homepage": {
+    "subtitle": "All bodies and experiences are welcome!",
+    "quotes": {
+      "left": "“African dance”? \nLet's celebrate our commonalities and \nrespect our differences: \nThe art of dancing together.",
+      "right": "What happens in the dance ritual is both deeply personal and highly political.",
+      "leftImageAlt": "Profile image of a Black man with a beard, calm expression, looking straight ahead toward the woman.",
+      "rightImageAlt": "Profile image of a white woman, smiling, looking straight ahead toward the man."
+    }
   }
+
+
+
 }
 
 
