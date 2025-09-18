@@ -4,6 +4,8 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import img1 from '../../src/assets/images/imgStartSeite/img1.png'
 import img2 from '../../src/assets/images/imgStartSeite/img2.jpg'
 import img3 from '../../src/assets/images/imgStartSeite/img3.jpg'
+import { useTranslation } from "react-i18next";
+
 
 
 const images = [
@@ -13,6 +15,10 @@ const images = [
 
 const HeroCarousel = () => {
   const [current, setCurrent] = useState(0);
+    const { t } = useTranslation("common");
+  
+
+
 
   // Change image automatically after 3 sec
   useEffect(() => {
@@ -57,9 +63,11 @@ const HeroCarousel = () => {
           {/* 🔹 Texto centralizado acima do overlay */}
           <div className="absolute z-20 inset-0 flex items-center justify-start">
       <div className="ml-25 max-w-[600px]">
-        <h2
-         className="font-tussilago text-[#f9f3a2] text-5xl md:text-7xl leading-tight"> {/* #FAF070 */}
-        Welcome to <br /> Tanz der Kulturen
+        <h1 className="font-tussilago text-[#f9f3a2] text-5xl md:text-7xl leading-tight"> {/* #FAF070 */}
+        Dance and <br /> Heal
+        </h1>
+        <h2 className="font-tussilago text-white text-lg md:text-3xl leading-relaxed ">
+          {t("homepage.subtitle")}
         </h2>
       </div>
     </div>

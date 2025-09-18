@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
 import massa from "../assets/images/imgStartSeite/massa.png";
 import stephanie from "../assets/images/imgStartSeite/stephanie.png";
+import { useTranslation } from "react-i18next";
 
-//  auxiliar component to the quotes
+// auxiliar para as aspas
 const QuoteBox = ({ children, align = "left" }) => (
   <div
     className={`
@@ -17,52 +18,53 @@ const QuoteBox = ({ children, align = "left" }) => (
   </div>
 );
 
-const QuoteSection = ({ 
-  leftQuote = "„Afrikanischer Tanz“? \nLasst uns unsere Gemeinsamkeiten feiern und \nunsere Unterschiede respektieren: \nDie Kunst, Gemeinschaft zu tanzen." ,
-  rightQuote = "Was im Tanzritual geschieht, ist sowohl zutiefst persönlich als auch hochgradig politisch." 
-}) => {
-  
-  // images constants
+const QuoteSection = ({ leftQuote, rightQuote }) => {
+  const { t } = useTranslation("common"); // <- precisa estar no topo do componente
+
+  // defaults derivados via i18n (se não vier prop, usa a tradução)
+  const resolvedLeftQuote = leftQuote ?? t("homepage.quotes.left");
+  const resolvedRightQuote = rightQuote ?? t("homepage.quotes.right");
+
+  // images with translate alt 
   const leftImage = {
     src: massa,
-    alt: "Profile image of a Black man with a beard, calm expression, looking straight ahead toward the woman."
+    alt: t("homepage.quotes.leftImageAlt"),
   };
 
   const rightImage = {
     src: stephanie,
-    alt: "Profile image of a white woman, smiling, looking straight ahead toward the man."
+    alt: t("homepage.quotes.rightImageAlt"),
   };
 
   return (
     <section className="relative w-full bg-[#E0F5F7] overflow-hidden">
       {/* ===== MOBILE ===== */}
-      <div className="md:hidden class grid justify-center">
-          {/* left image */}
-          <img
-            src={leftImage.src}
-            alt={leftImage.alt}
-            className="absolute left-0 object-contain h-full w-auto max-w-[47.6vw]"
-          />
-          {/* right image */}
-          <img
-            src={rightImage.src}
-            alt={rightImage.alt}
-            className="absolute right-0 object-contain h-full w-auto max-w-[43vw]"
-          />
+      {/* (corrigido: removido 'class' sobrando na className) */}
+      <div className="md:hidden grid justify-center">
+        {/* left image */}
+        <img
+          src={leftImage.src}
+          alt={leftImage.alt}
+          className="absolute left-0 object-contain h-full w-auto max-w-[47.6vw]"
+        />
+        {/* right image */}
+        <img
+          src={rightImage.src}
+          alt={rightImage.alt}
+          className="absolute right-0 object-contain h-full w-auto max-w-[43vw]"
+        />
 
         {/* quotes overlay on mobile */}
         <div className="py-4 flex flex-col gap-4 items-center max-w-sm px-4">
-          <div className='bg-white/60 backdrop-blur-sm rounded-xl w-full'>
-            <QuoteBox>“{leftQuote}”</QuoteBox>
-          </div>
-          
           <div className="bg-white/60 backdrop-blur-sm rounded-xl w-full">
-            <QuoteBox align="right">“{rightQuote}”</QuoteBox>
+            <QuoteBox>“{resolvedLeftQuote}”</QuoteBox>
+          </div>
+
+          <div className="bg-white/60 backdrop-blur-sm rounded-xl w-full">
+            <QuoteBox align="right">“{resolvedRightQuote}”</QuoteBox>
           </div>
         </div>
       </div>
-
-
 
       {/* ===== WEB/DESKTOP ===== */}
       <div className="hidden md:flex items-center justify-between py-0">
@@ -73,16 +75,15 @@ const QuoteSection = ({
           className="m-0 object-cover h-auto w-40 lg:w-48 shrink-0"
         />
 
-        {/* quotes side by side, without overlay */}
+        {/* quotes without overlay */}
         <div className="flex items-center justify-between gap-6 w-full max-w-4xl px-4">
-          <div className='bg-gray-100 rounded-xl shadow-md'>
-            <QuoteBox>“{leftQuote}”</QuoteBox>
-          </div>
-          
           <div className="bg-gray-100 rounded-xl shadow-md">
-            <QuoteBox align="right">“{rightQuote}”</QuoteBox>
+            <QuoteBox>“{resolvedLeftQuote}”</QuoteBox>
           </div>
-          
+
+          <div className="bg-gray-100 rounded-xl shadow-md">
+            <QuoteBox align="right">“{resolvedRightQuote}”</QuoteBox>
+          </div>
         </div>
 
         {/* right image */}
