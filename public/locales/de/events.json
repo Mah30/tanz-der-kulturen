@@ -1,0 +1,27 @@
+{
+    "calendar": {
+      "heading": "Veranstaltungskalender",
+      "moreInfoAria": "Mehr Informationen zu allen Veranstaltungen"
+    },
+    "list": {
+      "1": {
+        "month": "August",
+        "title": "Tanztag und Konzert",
+        "description": "Tanz der Lust und des Schmerzes",
+        "workshopLeitung": "Stephanie Bangoura, Massa Dembélé & Gäste"
+      },
+      "2": {
+        "month": "August",
+        "title": "Creative Movement",
+        "description": "Training Course – innovative Methoden mit Tanz",
+        "workshopLeitung": "Stephanie Bangoura und Massa Dembélé"
+      },
+      "3": {
+        "month": "September",
+        "title": "Live Music",
+        "description": "Musik und Performance mit Künstler:innen",
+        "workshopLeitung": "Stephanie Bangoura"
+      }
+    }
+  }
+  

@@ -20,13 +20,13 @@
     "anmeldung-weiterbildung": "Anmeldung",
 
     "uber-uns": "Über uns",
-    "unser-werte": "Unser Werte",
+    "unser-werte": "Unsere Werte",
     "unser-team": "Unser Team",
     "vergangene-projekte": "Vergangene Projekte",
     "testimonials": "Testimonials",
-    
+
     "kontakt": "Kontakt",
-    "so-erreichst-du-uns": "So erreichst Du uns",
+    "so-erreichst-du-uns": "So erreichst du uns",
     "mitglied-werden": "Mitglied werden",
     "spenden": "Spenden",
     "open-call": "Open Call",
@@ -38,10 +38,10 @@
     "quotes": {
       "left": "„Afrikanischer Tanz“? \nLasst uns unsere Gemeinsamkeiten feiern und \nunsere Unterschiede respektieren: \nDie Kunst, Gemeinschaft zu tanzen.",
       "right": "Was im Tanzritual geschieht, ist sowohl zutiefst persönlich als auch hochgradig politisch.",
-      "leftImageAlt": "Profilbild eines schwarzen Mannes mit Bart, ruhiger Ausdruck, schaut geradeaus zur Frau.",
-      "rightImageAlt": "Profilbild einer weißen Frau, lächelnd, schaut geradeaus zum Mann."
+      "leftImageAlt": "Profilbild eines schwarzen Mannes mit Bart; ruhiger Ausdruck, Blick zur Frau.",
+      "rightImageAlt": "Profilbild einer weißen Frau, lächelnd; Blick zum Mann."
     }
-  }
+  },
 
+  "moreInfo": "Mehr Info"
 }
-

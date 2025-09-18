@@ -1,27 +1,34 @@
 // src/i18n.js
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import LanguageDetector from 'i18next-browser-languagedetector';
-import HttpBackend from 'i18next-http-backend';
+// i18n.js
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+import HttpBackend from "i18next-http-backend";
+
+// // Em Vite, os arquivos em /public ficam servidos em /locales/...
+const base =
+  typeof import.meta !== "undefined" && import.meta.env && import.meta.env.BASE_URL
+    ? import.meta.env.BASE_URL
+    : "/";
+
 
 
 i18n
-  .use(HttpBackend) 
-  .use(LanguageDetector) 
-  .use(initReactI18next) 
+  .use(HttpBackend)                  // carrega JSON via HTTP
+  .use(LanguageDetector)           
+  .use(initReactI18next)            
   .init({
-    fallbackLng: 'en',
-    supportedLngs: ['en', 'de'],
-    ns: ['common'],
-    defaultNS: 'common',
-    interpolation: { escapeValue: false },
-    detection: {
-      order: ['localStorage', 'htmlTag', 'navigator'],
-      caches: ['localStorage'],
-    },
+    debug: true,                    // to see missingKey no console
+    fallbackLng: "de",
+    supportedLngs: ["de", "en"],
+    ns: ["common", "events"],       
+    defaultNS: "common",
+    fallbackNS: "common",
     backend: {
-      loadPath: '/locales/{{lng}}/{{ns}}.json', // public/locales/en/common.json etc
-    },
+      loadPath: `${base}locales/{{lng}}/{{ns}}.json` // busca em /public/locales
+    },          // caminho correto dos JSON
+    react: { useSuspense: false },
+    interpolation: { escapeValue: false }
   });
 
 export default i18n;
