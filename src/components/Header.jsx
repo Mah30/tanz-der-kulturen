@@ -37,6 +37,11 @@ const Header = () => {
           <div className="hidden md:flex">
             <I18nControls textAs="p" />     
           </div>
+        <div className="hidden md:block">
+  <Link to="/registration" className="text-gray-400 hover:text-red-500">
+    Anmeldung / Registration
+  </Link>
+</div>
 
         {/* Hamburger Menu - Mobile */}
         <button
@@ -68,7 +73,15 @@ const Header = () => {
                 onCloseAll={handleCloseAll} 
               />
             ))}
-
+<li className="mt-2">
+  <Link
+    to="/registration"
+    className="text-gray-400 hover:text-red-500"
+    onClick={handleCloseAll}
+  >
+    Anmeldung / Registration
+  </Link>
+</li>
             {/* Login/Signup no mobile (inside the painel) */}
             <li className="mt-2 flex items-center gap-2">
               
